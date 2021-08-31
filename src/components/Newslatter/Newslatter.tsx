@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
@@ -10,12 +10,8 @@ import "./Newslatter.scss";
 export const Newslatter = () => {
   const urlMail = 'https://finance.us6.list-manage.com/subscribe/post?u=98b41a295edb23c0f4a7609f9&amp;id=1a704a895e';
   const {t} = useTranslation("home")
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const {} = useForm();
+
 
 
   return (

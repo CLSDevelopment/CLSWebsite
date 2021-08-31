@@ -21,10 +21,10 @@ export const Testimonials:React.FC<TestimonialType> = ({
     return (
 
         <div className="container-testimonials">
-            <img src={iconTestimonial}/>
+            <img src={iconTestimonial} alt="testimonail"/>
             <p className="testimonials-text">{text}</p>
         <div className="testimonials-person">
-            <img src={img}/> 
+            <img src={img} alt="testimonail"/> 
             <h2 className="person-name">{name}</h2>
             <h5 className="person-profession">{profession}</h5>
         </div>

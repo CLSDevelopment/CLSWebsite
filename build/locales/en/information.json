@@ -1,0 +1,33 @@
+{
+    "information-description":"The Future of Freelancers and",
+    "information-descriptionBoldYellow":"Job Seekerrs",
+    "info-content-description" : "About us",
+    "info-content-text-about-us": " ClearSight is a global freelance platform that offers reliable freelance solutions using decentralised technology such as blockchain and smart cards. This interactive platform helps employers to find the right freelancers and vice versa. We have backed up our ecosystem with a BSC based token to promote an exquisite user experience among members.ClearSight understands how freelancers have been tormented with huge commission fees by other freelance websites and are committed to reducing this fee with blockchain technology. Additionally, our user-friendly platform allows you to access your money easily using a Visa Debit Card. ClearSight offers freelancers an opportunity to manage their professional profiles using a digital identity, which protects them from theft and fraud. With over 21 bilion exchangeable tokens, ClearSight offers relatively lower transaction costs while maintining super fast transactions at the same time.",
+    
+    "solution-freelancer" : "Solutions to Freelancers",
+    "solution-text-freelancer-first" : "We store your user data e.g., certificates, reputations, and ratings in a BSC-based blockchain and allow users to own their profile data. ",
+    "solution-text-freelancer-second" : "We offer a BSC protocol based transaction algorithm for freelancers. ClearSight puts all your creations in our token, features automatic escrow payment which gives clients exclusive rights to certain deliveries. ",
+    "solution-text-freelancer-third" : "We minimize reliance on bank cards by using smart contracts as escrow for payment. This also reduces transaction charges among freelancers.",
+    "solution-text-freelancer-fourth" : "We offer a debit card-based wallet for payment to enhance trust. Payments are made automatically after delivery.",
+    "solution-text-freelancer-five" : "We verify and identify each profile using our blockchain technology to eliminate theft and fraud, we are heavily vested in KYC and AML techniques and provide superb scans of both freelancers and employers.",
+    
+    "solution-employer" : "Solutions to Employer",
+    "solution-text-employer-first" : "You will interact directly with the best talent without passing through a third party.",
+    "solution-text-employer-second" : "We will help you to verify identity (ID) and record of accomplishment for freelancers.",
+    "solution-text-employer-third" : "We offer DAPPS that allow freelancers to post proof of their records and reviews from previous employers to boost trust.",
+    "solution-text-employer-fourth" : "We offer tools that help to integrate and decentralize the workforce using blockchain techniques.",
+    "solution-text-employer-five" : "We allow you to verify quality delivery before proceeding with payment",
+    "solution-text-employer-six" : "We Ensure full KYC/AML enforcement on all our members, no matter if freelancers or employers. ",
+    
+    "question-description": "frequently asked question",
+    "first-q-title": "How can you assure us that this is actually going to work without high fees and fast transactions?",
+    "first-q-description": "Thanks to binance smart chain we were able to achieve this in no time, our primary token( Clearsight CLS ) is a BSC based token with unlimited power.",
+    "second-q-title": "How many CLS tokens exist, and what are some good parts of it?",
+    "second-q-description": "There are currently 21 bilion tokens created for the initial launch, however this number is unlimited and every job changes this by:Employer mints tokens when he purchases, the finished job burns the tokens.Meanwhile the investors in our platform that hold the tokens keep 1% of every transaction fee without having the employer or freelancer pay anything to the platform, this is how we make our earnings, by not hurting the others.",
+    "third-q-title": "When are you going to launch the platform?",
+    "third-q-description": "The first demo of the platform will be presented on Crypto Expo Dubai 2021, after that we are going to fully commit to have the initial version live on q1 2022, meanwhile the token presale will be launched in q4 2021 and q1 2022, we have limited it so the investors keep good shares and earn well, while we have enough investment money to build this platform and beat our competition",
+    "fourth-q-title": "How many people work for Clearsight?",
+    "fourth-q-description": "It’s hard to answer this question the right way, we have 3 founders that are the fathers of this platform, however Clearsight is fully built by freelancers around the world, everything you see and use on Clearsight will be built by a freelancer, we commit to have the entire project built by freelancers, if you’re one of them and want to work on clearsight, contact us on info@clearsight.finance ."
+ 
+
+}

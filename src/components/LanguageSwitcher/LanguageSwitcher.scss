@@ -1,11 +1,39 @@
-.img-lang {
-    width: 20px;
-}
 
-.MuiInput-underline:before {
-    border-bottom: 1px solid white !important;
-}
+.select-language-component {
+    button {
+        cursor: pointer;
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly !important; 
+        align-items: center;
+        padding: 5px 5px !important;
+        /* color: white; */
+        /* border: thin solid rgba(77, 77, 77, 0.3); */
+        /* border-radius: 4px; */
+        background: transparent;
+        border: none !important;
+        // background-color: white;
+        border-radius: 5px;
+    }
+    ul {
+        display: block !important;
+        overflow-x: hidden !important;
+    
+        
+    }
 
-.MuiSelect-icon {
-    color: white !important
+    span{
+        color:grey !important;
+    }
+
+  
+        span:hover{
+        color: #031530 !important;
+        font-weight: 600;
+        }
+
+    li:hover{
+        background: #3481f3 ;
+        color: yellow !important;
+    }
 }

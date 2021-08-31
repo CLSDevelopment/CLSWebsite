@@ -4,6 +4,7 @@ import Head from "next/head"
 import { useTranslation } from "react-i18next";
 import { AccessToCryptoSection, BuyCryptoSection, ExchangeInstantlySection, MegatronSection } from "sections";
 import megatronPhoto from "../../assets/images/wallet-megatron-img.svg"
+
 export default () => {
 
   const {t} = useTranslation("wallet")

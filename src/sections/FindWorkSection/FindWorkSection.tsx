@@ -21,19 +21,19 @@ export const FindWorkSection = () => {
          {t("find-work-text")}
         </p>
         <div className="first-icon-text">
-          <img className="icon-1" src={icon1} />
+          <img className="icon-1" src={icon1} alt="find-work" />
           <p className="icon-text">
             {t("first-icon-text")}
           </p>
         </div>
         <div className="first-icon-text">
-          <img className="icon-1" src={icon2} />
+          <img className="icon-1" src={icon2} alt="find-work"/>
           <p className="icon-text">
            {t("second-icon-text")}
           </p>
         </div>
         <div className="first-icon-text">
-          <img className="icon-1" src={icon3} />
+          <img className="icon-1" src={icon3} alt="find-work"/>
           <p className="icon-text">
             {t("third-icon-text")}
           </p>

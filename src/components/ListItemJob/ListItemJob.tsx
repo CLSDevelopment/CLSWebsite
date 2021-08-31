@@ -15,7 +15,7 @@ export const ListItemJob: React.FC<JobProps> = ({data,img}) => {
               <img
                 className="image-tab-body"
                 src={img}
-                alt="image"
+                alt="tab-icon"
               />
             </div>
             <div className="col-sm-12 col-md-6 container-tab-body">

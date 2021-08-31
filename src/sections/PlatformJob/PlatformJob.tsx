@@ -1,6 +1,5 @@
 import React from "react";
 import { TabsForJobs } from "../../components/TabsForJobs/TabsForJobs";
-import arrowIcon from "../../assets/icon/arrow-platform-icon.svg";
 import "./PlatfromJob.scss";
 import { Wave } from "../../components";
 import { SkilsComponent } from "../../components/SkilsComponent/SkilsComponent";

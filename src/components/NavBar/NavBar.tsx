@@ -94,11 +94,11 @@ export const NavBar = () => {
       <nav className={navbarClasses.join(" ")} id="scroll_y">
         <div className="mr-auto">
           <a href="/" className="navbar-brand clearsight-logo">
-            <img src={logo} alt="logo" className="logo-destop" />
+            <img src={logo} alt="clearsight" className="logo-destop" />
             <img
               src={!!scrollPosition ? logo : logoWhite}
               className="logo-mobile"
-              alt="logo"
+              alt="clearsight"
             />
           </a>
         </div>
@@ -135,17 +135,17 @@ export const NavBar = () => {
             )}
           </div>
           <div className="hamb-menu-logo">
-            <img src={logoWhite} width={"150px"} />
+            <img src={logoWhite} width={"150px"}  alt="clearsight"/>
             <div className="lng-switcher">
               <LanguageSwitcher />
             </div>
           </div>
 
-          <Switch>
+   
             <ul className="navbar-nav ml-auto">
               <li className={navbarButton.join(" ")} onClick={toggleExpand}>
                 <Link to={"/home"}>
-                  <a
+                  <span
                     className={
                       window.location.pathname === "/home"
                         ? "active"
@@ -153,12 +153,12 @@ export const NavBar = () => {
                     }
                   >
                     {t("home")}
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className={navbarButton.join(" ")} onClick={toggleExpand}>
                 <Link to="/wallet">
-                  <a
+                  <span
                     className={
                       window.location.pathname === "/wallet"
                         ? "active"
@@ -166,12 +166,12 @@ export const NavBar = () => {
                     }
                   >
                     {t("wallet")}
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className={navbarButton.join(" ")} onClick={toggleExpand}>
                 <Link to="/platform">
-                  <a
+                  <span
                     className={
                       window.location.pathname === "/platform"
                         ? "active"
@@ -179,12 +179,12 @@ export const NavBar = () => {
                     }
                   >
                     {t("platform")}
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className={navbarButton.join(" ")} onClick={toggleExpand}>
                 <Link to="debit-card">
-                  <a
+                  <span
                     className={
                       window.location.pathname === "/debit-card"
                         ? "active"
@@ -192,12 +192,12 @@ export const NavBar = () => {
                     }
                   >
                     {t("debitcard")}
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className={navbarButton.join(" ")} onClick={toggleExpand}>
                 <Link to="/information">
-                  <a
+                  <span
                     className={
                       window.location.pathname === "/information"
                         ? "active"
@@ -205,14 +205,13 @@ export const NavBar = () => {
                     }
                   >
                     {t("information")}
-                  </a>
+                  </span>
                 </Link>
               </li>
               <li className="lang-switcher-destop">
                 <LanguageSwitcher />
               </li>
             </ul>
-          </Switch>
           <div className="hamb-socials">
             <div className="container-social-media">
               <a className="fa fa-facebook round" />

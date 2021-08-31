@@ -1,0 +1,20 @@
+{
+    "debit-card-title": "Willkommen bei",
+    "debit-card-descriptionOptional": "Debit karte",
+    "debit-card-textArea" : "Wir stellen unseren Nutzern eine eigene Debitkarte zur Verfügung, mit der sie ihr hart verdientes Geld problemlos abheben können.",
+    "debit-card-btn": "Mehr erfahren",
+
+    "debit-card-crypto-description": "SIE VERDIENEN EINEN EINFACHEN ZUGANG ZU IHREM GELD",
+    "debit-card-title-one":"VISA Debitkarte",
+    "debit-card-title-second":"Akzeptiert in über 180 Ländern",
+    "debit-card-title-third":"Faire Beschränkungen",
+    "debit-card-title-fourth":"Super niedrige Gebühren",
+    "debit-card-crypto-btn": "MEHR ERFAHREN",
+
+    "gs-card-title-one": "Laden Sie unsere mobile Wallet runter",
+    "gs-card-description-one": "Verfügbar für iOS und Android",
+    "gs-card-title-two": "Bestellen Sie Ihre Debitkarte und bezahlen Sie die Versandgebühr",
+    "gs-card-description-two": "Wir liefern sie innerhalb von 10-15 Tagen an Ihre Adresse",
+    "gs-card-title-third": "Aktivieren Sie sie am nächstgelegenen Geldautomaten",
+    "gs-card-description-third": "Die Aktivierung erfolgt einfach, indem Sie die Karte in den Geldautomaten stecken und Ihr Guthaben überprüfen."
+}

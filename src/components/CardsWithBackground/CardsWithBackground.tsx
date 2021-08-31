@@ -9,7 +9,7 @@ export const CardWithBackground = () => {
   return (    
     <div className="row container-card-background">
       <div className="col-sm-12 col-md-6 col-xl-4 card--container">
-        <img src={image} alt="first-image"/>
+        <img src={image} alt="first-card"/>
         <div className="card--content">
           <p className="card--name">Mark Wood Journal</p>
           <h4 className="card--text">
@@ -18,7 +18,7 @@ export const CardWithBackground = () => {
         </div>
       </div>
       <div className="col-sm-12 col-md-6 col-xl-4 card--container">
-        <img src={image2} alt="second-image"/>
+        <img src={image2} alt="second-card"/>
         <div className="card--content">
           <p className="card--name">Mark Wood Journal</p>
           <h4 className="card--text">
@@ -27,7 +27,7 @@ export const CardWithBackground = () => {
         </div>
       </div>
       <div className="col-sm-12 col-md-6 col-xl-4 card--container">
-        <img src={image3} alt="third-image"/>
+        <img src={image3} alt="third-card"/>
         <div className="card--content">
           <p className="card--name">Mark Wood Journal</p>
           <h4 className="card--text">
