@@ -1,0 +1,147 @@
+@import "~layouts/PublicLayout/Variable.scss";
+
+
+.container--footer {
+  background: #051047;
+  padding: 10px 10px 20px;
+  color: #ffffff;
+  position: relative;
+
+  
+
+
+  .footer--menu {
+    margin-top: 110px;
+
+    @include breakpoint(sm) {
+      margin-top: 30px;
+    }
+
+    .foooter--menu--title {
+      font-size: 22px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+    }
+
+    ul {
+      padding-top: 20px;
+      padding-left: 0;
+
+      li {
+        display: block;
+        padding-bottom: 10px;
+        cursor: pointer;
+
+        i {
+          margin-right: 10px;
+        }
+
+        a {
+          text-decoration: none;
+          color: #ffffff;
+          text-decoration: none;
+          color: #ffffff;
+          font-weight: 450;
+          font-style: normal;
+          letter-spacing: normal;
+          line-height: normal;
+          text-align: left;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .row--footer {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    .col--footer {
+      .footer-logo {
+        width: 100%;
+        max-width: 265px;
+      }
+
+      .footer--description {
+        margin-top: 30px;
+        font-size: 15px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        max-width: 373px;
+      }
+    }
+  }
+
+  .row--footer--terms {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    opacity: 0.5;
+    color: #ffffff;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    .col--footer--copy-right {
+      padding: 0;
+      text-align: left;
+
+      @include breakpoint(md) {
+        text-align: center;
+        font-size: 16px;
+      }
+
+      .copy-right {
+        margin-top: 20px;
+        margin-bottom: 0;
+      }
+    }
+
+    .col--footer--terms-cond {
+      padding: 0;
+      text-align: right;
+
+      @include breakpoint(md) {
+        display: none;
+      }
+
+      .terms-cond {
+        margin-top: 20px;
+        margin-bottom: 0;
+
+        a {
+          opacity: 0.5;
+          color: #ffffff;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .container-social-media {
+    display: flex;
+    
+
+    .round {
+      color: #ff9e4a;
+      border: 2px solid #ff9e4a;
+      font-size: 19px;
+      width: 43px;
+      border-radius: 50%;
+      height: 43px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      margin-right: 9px;
+      
+
+      &:hover {
+        color: #ffffff;
+        background: #ff9e4a;
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+$textColorTitle: #1f1f1f;
+$textColorDescription: #1e1e1e;
+$buttonBackgroundColor: #000000;
+$buttonTextColor: #ffffff;
+$sideNavigationWidth: 260px;
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 320px) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $class == xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $class == xxl {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: sm, md, lg";
+  }
+}
+
+%navigationTitle {
+  color: $textColorTitle;
+  font-size: 17px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+%titleSection {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 90px;
+  color: $textColorTitle;
+
+  @include breakpoint(sm) {
+    font-size: 31px;
+    line-height: 40px;
+  }
+}
+
+%titleSectionPresent {
+  color: $textColorTitle;
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 66px;
+
+  @include breakpoint(sm) {
+    font-size: 38px;
+    line-height: 50px;
+  }
+}
+
+%descriptionSectionPresent {
+  color: $textColorTitle;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.42px;
+  line-height: 40px;
+
+  @include breakpoint(sm) {
+    font-size: 18px;
+    line-height: 35px;
+  }
+}
+
+%titleSectionSmall {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 64px;
+  color: $textColorTitle;
+}
+
+%descriptionSection {
+  font-size: 22px;
+  color: $buttonBackgroundColor;
+  letter-spacing: -0.38px;
+  line-height: 40px;
+
+  @include breakpoint(sm) {
+    font-size: 16px;
+    line-height: 30px;
+  }
+}
+
+%buttonSection {
+  color: $buttonTextColor;
+  background: $buttonBackgroundColor;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 17px;
+  text-decoration: none;
+}
+
+%section-button {
+  background-color: #ffffff;
+  background-image: linear-gradient(to top, #3481f3 0%, #091d80 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+
+
+  @include breakpoint(sm) {
+    font-size: 12px;
+  }
+}

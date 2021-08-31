@@ -1,0 +1,119 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.find-work-section {
+  
+  .platform-body {
+    align-self: center;
+
+    .section-text {
+      max-width: 565px;
+      color: #0a134f;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 35px;
+      text-align: left;
+      text-align: justify;
+      opacity: 60%;
+
+      @include breakpoint(md) {
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        margin: 20px auto;
+      }
+      @include breakpoint(lg) {
+        font-size: 15px;
+      }
+    }
+    .section-title {
+      letter-spacing: 7.2px;
+      color: #0a134f;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: inherit;
+      text-align: left;
+      text-transform: uppercase;
+
+      @include breakpoint(sm) {
+        font-size: 22px;
+      }
+
+      @include breakpoint(md) {
+        text-align: center;
+      }
+
+      @include breakpoint(lg) {
+        font-size: 22px;
+      }
+    }
+    .section-description {
+      font-size: 64px;
+      font-weight: 700;
+      letter-spacing: normal;
+      line-height: 70px;
+      text-transform: uppercase;
+      color: #0a134f;
+
+      @include breakpoint(sm) {
+        font-size: 30px;
+        line-height: 30px;
+      }
+
+      @include breakpoint(md) {
+        text-align: center;
+        font-size: 40px;
+        color: #0a134f;
+      }
+
+      @include breakpoint(lg) {
+        font-size: 30px;
+        line-height: 50px;
+      }
+    }
+    .first-icon-text {
+      display: flex;
+      margin: 20px auto;
+
+      @include breakpoint(md) {
+        display: block;
+        justify-content: center;
+      }
+      .icon-1 {
+        border: 1px solid rgba(0, 0, 0, 0.11);
+        background-color: #f5f9ff;
+        max-width: 72px;
+        max-height: 72px;
+        padding: 10px;
+        border-radius: 9px;
+        margin-right: 30px;
+
+        @include breakpoint(md) {
+          display: block;
+          margin: 0 auto;
+        }
+      }
+
+      .icon-text {
+        max-width: 402px;
+        color: #0a134f;
+        margin-bottom: 0;
+        font-size: 19px;
+        font-weight: 700;
+   
+      
+        line-height: 28px;
+        text-align: left;
+        align-items: center;
+        display: flex;
+
+        @include breakpoint(md) {
+          text-align: center;
+          max-width: 300px;
+          margin: 0 auto;
+          margin-top: 20px;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}

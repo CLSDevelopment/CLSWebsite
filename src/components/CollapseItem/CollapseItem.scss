@@ -1,0 +1,45 @@
+.container--collapse {
+  box-shadow: 2px 4px 16px rgba(102, 51, 204, 0.12);
+  border: 1px solid rgba(102, 51, 204, 0.09);
+  background-color: #ffffff;
+  padding: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  .collapse--title {
+    color: #0a134f;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: auto;
+      width: 60px;
+    }
+
+    .collapse--number {
+      color: #f14f21;
+      font-size: 20px;
+      font-weight: 700;
+      margin-right: 5px;
+    }
+  }
+
+  .collapse--description {
+    opacity: 0.4;
+    color: #000000;
+    font-size: 15px;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  .accordion {
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+}

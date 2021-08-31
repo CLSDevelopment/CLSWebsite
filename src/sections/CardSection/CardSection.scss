@@ -1,0 +1,39 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.cards-section {
+  padding: 40px 0;
+  .card-body{
+    padding-top: 0px;
+  }
+  .card-title {
+    .title {
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 7.2px;
+      line-height: 15px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .card-text-area {
+      color: #0a134f;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 35px;
+      text-align: center;
+    }
+
+    .description {
+      color: #0a134f;
+
+      font-size: 64px;
+      font-weight: 700;
+      line-height: normal;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include breakpoint(sm) {
+        font-size: 30px;
+      }
+    }
+  }
+}

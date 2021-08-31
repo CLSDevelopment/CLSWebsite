@@ -1,0 +1,90 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.container-card-background {
+  max-width: 1250px;
+  margin: 0 auto !important;
+
+  .card--container {
+    margin-bottom: 20px;
+    position: relative;
+    @include breakpoint(md) {
+      margin-bottom: 20px;
+    }
+
+    img {
+      height: 520px;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+
+      @include breakpoint(md) {
+        position: relative;
+        height: 380px;
+        border-radius: 10px;
+      }
+      @include breakpoint(xs) {
+        position: relative;
+        height: 300px;
+        border-radius: 10px;
+      }
+    }
+
+    .card--content {
+      box-shadow: 0 24px 32px rgba(0, 0, 0, 0.61);
+      background-color: #ffffff;
+      position: absolute;
+      bottom: 40px;
+      padding: 13px 20px;
+      border-radius: 8px;
+      width: 100%;
+      max-width: 372px;
+      left: 4px;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include breakpoint(md) {
+        bottom: 21px;
+        padding: 3px 10px;
+        max-width: 269px;
+        left: 0
+      }
+      @include breakpoint(sm) {
+        bottom: 31px;
+        padding: 7px 13px;
+        max-width: 269px;
+        left: 0
+      }
+      @include breakpoint(xs) {
+        bottom: 10px;
+        max-width: 213px;
+        left: 14px;
+      }
+      .card--name {
+        color: #f04921;
+        font-size: 13px;
+        font-weight: 400;
+        text-align: left;
+        margin-bottom: 14px;
+
+        @include breakpoint(sm) {
+          font-size: 10px;
+        }
+      }
+
+      .card--text {
+        color: #000000;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: left;
+
+        @include breakpoint(sm) {
+          font-size: 15px;
+        }
+        @include breakpoint(sm) {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}

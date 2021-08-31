@@ -1,0 +1,32 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.container--question {
+  background-color: #f5f9ff;
+
+  .question--content {
+    max-width: 1250px;
+    display: block;
+    margin: 0 auto;
+    padding: 40px 5px;
+
+    .title--question {
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 8.8px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .description--question {
+      color: #0a134f;
+      font-size: 50px;
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+
+      @include breakpoint(sm) {
+        font-size: 35px;
+      }
+    }
+  }
+}

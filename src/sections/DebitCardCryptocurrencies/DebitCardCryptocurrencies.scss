@@ -1,0 +1,82 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.debit-card-cryptocurrencies {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 50px 0px;
+
+  @include breakpoint(sm) {
+    padding: 100px 0px;
+  }
+
+  .jumbotrom-component {
+    .platform-body {
+      align-self: center;
+      max-width: 510px;
+      margin: 0 auto;
+
+      .section-title {
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 8.8px;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @include breakpoint(md) {
+          text-shadow: 0 4px 13px rgba(0, 0, 0, 0.3);
+          font-size: 20px;
+          font-weight: 400;
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 3.8px;
+        }
+      }
+      .section-description {
+        max-width: 415px;
+        color: #0a134f;
+        font-size: 43px;
+        font-weight: 700;
+        text-align: left;
+        text-transform: uppercase;
+
+        @include breakpoint(md) {
+          color: #0a134f;
+          font-size: 20px;
+          font-weight: 800;
+          line-height: 43.39px;
+          text-align: center;
+          text-transform: uppercase;
+          margin: 0 auto;
+        }
+        @include breakpoint(lg) {
+          font-size: 30px;
+        }
+        @include breakpoint(sm) {
+          font-size: 25px;
+        }
+        @include breakpoint(xs) {
+          font-size: 20px;
+        }
+      }
+      .section-btn {
+        text-decoration: none;
+      }
+      .section-button {
+        width: 100%;
+        max-width: 206px;
+        height: 58px;
+        display: block;
+        margin: 50px 0;
+
+        @extend %section-button;
+
+        @include breakpoint(sm) {
+          display: block;
+          margin: 0 auto;
+          max-width: 185px;
+          height: 50px;
+        }
+      }
+    }
+  }
+}

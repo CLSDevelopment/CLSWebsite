@@ -1,0 +1,281 @@
+@import "~layouts/PublicLayout/Variable.scss";
+
+.container-megatron-column {
+  background: linear-gradient(to top, #3481f3 0%, #091d80 100%);
+  padding: 165px 0 40px;
+  
+ 
+  .video{
+    display: block;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    
+  
+    background-color: rgba(255, 255, 255, 0.91);
+ 
+
+    > div {
+      margin-top: 30px;
+      border-radius: 20px;
+      width:100% !important;
+       height:450px !important;
+
+      
+
+       @include breakpoint(lg) {
+        margin-top: 20px;
+       height: 520px !important;
+       z-index: 100;
+       margin-top: 250px;
+      };
+
+       @include breakpoint(sm) {
+         margin-top: 20px;
+        height: 220px !important;
+        z-index: 100;
+        margin-top: 150px;
+       };
+
+       @include breakpoint(xs) {
+        margin-top: 20px;
+       height: auto !important;
+       z-index: 100;
+       margin-top: 150px;
+      };
+    
+    }
+  }
+  .megatron {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    .megatron-left {
+      align-self: center;
+
+      .text-area-megatron {
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: normal;
+        line-height: 35px;
+        text-align: left;
+
+        @include breakpoint(sm) {
+          text-align: center;
+          font-size: 15px;
+        }
+      }
+      .megtron-icon {
+        display: flex;
+        margin: 40px auto;
+
+        @include breakpoint(sm) {
+          display: block;
+          text-align: center;
+        }
+
+        .icon-megatron-left {
+          margin-left: 15px;
+
+          @include breakpoint (md) {
+            width: 160px;
+          }
+          @include breakpoint(sm) {
+            width: 130px;
+          }
+          @include breakpoint(xs) {
+            width: 100px;
+          }
+        }
+        .icon-megatron-right {
+          @include breakpoint (md) {
+            width: 160px;
+          }
+          @include breakpoint(sm) {
+            width: 130px;
+          }
+          @include breakpoint(xs) {
+            width: 100px;
+          }
+        }
+      }
+      .button-megatron {
+        @include breakpoint(sm) {
+          margin: 0 auto;
+          padding: 25px 0px;
+
+          text-align: center;
+        }
+
+        @include breakpoint(xs) {
+          margin: 0 auto;
+          display: flex;
+        }
+        .button-megatron-white {
+          width: 100%;
+          max-width: 166px;
+          padding: 18px;
+          background-color: #ffffff;
+          border: none;
+          border-radius: 5px;
+          color: #14379e;
+          font-size: 15px;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          @include breakpoint(sm) {
+            max-width: 165px;
+            padding: 16px;
+          }
+
+          @include breakpoint(xs) {
+            max-width: 132px;
+          }
+        }
+        .button-megatron-transparent {
+          width: 100%;
+          max-width: 166px;
+          padding: 16px;
+          border: 2px solid #ffffff;
+          background: transparent;
+          border-radius: 5px;
+          color: #ffffff;
+          font-size: 15px;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin: 0 10px;
+
+          @include breakpoint(sm) {
+            max-width: 152px;
+            padding: 14px;
+          }
+
+          @include breakpoint(xs) {
+            max-width: 132px;
+          }
+        }
+        .button-megatron-orange {
+          width: 100%;
+          max-width: 166px;
+          padding: 18px;
+          background-color: #f99f2a;
+          background-image: linear-gradient(to top, #f04e21 0%, #f8a02c 100%);
+          border: none;
+          border-radius: 5px;
+          color: #ffffff;
+          font-size: 15px;
+          font-weight: 700;
+          text-transform: uppercase;
+
+          @include breakpoint(xs) {
+            margin: 0 auto;
+            max-width: 130px;
+            font-size: 12px;
+            padding: 12px;
+          }
+        }
+      }
+    }
+
+    .megatron-right {
+      margin: 0 auto;
+      max-width: 600px;
+      display: flex;
+    }
+
+    .title-clearsight-column {
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: 6.6px;
+      line-height: 67.87px;
+      text-transform: uppercase;
+      color: white;
+      text-align: left;
+
+      @include breakpoint(sm) {
+        font-size: 18px;
+        letter-spacing: 3.6px;
+        line-height: 50.87px;
+        text-align: center;
+      }
+      @include breakpoint(lg) {
+        font-size: 18px;
+        letter-spacing: 3.6px;
+        line-height: 20.87px;
+      }
+      @include breakpoint(xs) {
+        font-size: 14px;
+        letter-spacing: 1.6px;
+        line-height: 20.87px;
+      }
+    }
+
+    .description-clearsight-column {
+      text-shadow: 0 4px 13px rgba(0, 0, 0, 0.3);
+      color: #ffffff;
+      font-size: 50px;
+      font-weight: 900;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: normal;
+      text-align: left;
+      text-transform: uppercase;
+
+      @include breakpoint(lg) {
+        font-size: 31px;
+      }
+      @include breakpoint(sm) {
+        font-size: 22px;
+        text-align: center;
+      }
+      @include breakpoint(xs) {
+        font-size: 20px;
+      }
+    }
+
+    .footer-description-clearsight {
+      color: #fedc22;
+      font-size: 55px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 65px;
+      text-transform: uppercase;
+      text-align: center;
+
+      @include breakpoint(md) {
+        line-height: 40px;
+        font-size: 32px;
+      }
+      @include breakpoint(lg) {
+        line-height: 40px;
+        font-size: 31px;
+      }
+      @include breakpoint(xs) {
+        font-size: 20px;
+      }
+
+      span {
+        color: white;
+      }
+    }
+
+    .megatron-image {
+      width: 100%;
+      max-width: 1201px;
+      margin: 0 auto;
+      display: block;
+      z-index: 10;
+    }
+  }
+
+  .image--left {
+    order: 1;
+  }
+}

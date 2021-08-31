@@ -1,0 +1,331 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.style-scroll-shadow {
+  height: 135px;
+  position: fixed;
+  z-index: 100;
+  background: white;
+}
+
+#navbarSupportedContent {
+  justify-content: flex-end;
+}
+.container--custom--navbar {
+  width: 100%;
+  .logo-destop {
+    display: none;
+
+    @include breakpoint(lg) {
+      display: block;
+    }
+  }
+  .logo-mobile {
+    display: block;
+
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+  .navbar {
+    z-index: 50;
+    max-width: 1250px;
+    margin: 0 auto;
+
+    @include breakpoint(lg) {
+      background-color: white;
+    }
+
+    .user-profile {
+      width: 36px;
+      margin-right: 10px;
+      border-radius: 30px;
+    }
+
+    .profile-image {
+      width: 36px;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    @include breakpoint(md) {
+      padding: 10px 10px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    nav > ul {
+      padding: 4px 16px;
+    }
+
+    li {
+      display: flex;
+      padding: 6px 8px;
+      align-items: center;
+    }
+
+    .clearsight-menu-right {
+      order: 2;
+    }
+
+    .navbar-nav .dropdown-menu {
+      right: 0;
+      left: auto;
+      text-align: center;
+    }
+
+    .nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .link-color a {
+      color: black;
+    }
+
+    a {
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      color: #fedc22;
+
+      @extend %navigationTitle;
+      padding-right: 0.5rem;
+      padding-left: 1rem;
+      text-transform: uppercase;
+      font-size: 16px;
+      color: white;
+
+      @include breakpoint(sm) {
+        padding-right: 0.5rem;
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: #fedc22;
+        // -webkit-text-stroke: 1px #fedc22;
+      }
+    }
+
+    .active {
+      text-decoration: none;
+      font-weight: 700;
+      position: relative;
+      color: #fedc22;
+
+      &:hover {
+        -webkit-text-stroke: 0px black;
+      }
+    }
+
+    .no-active {
+      color:lightgray;
+    }
+
+    .navbar-collapse-custom {
+      @include breakpoint(lg) {
+        position: absolute;
+        background: linear-gradient(to top, #3481f3 0%, #091d80 100%);
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+
+        .drop-down-user {
+          position: inherit;
+          top: 66px;
+          text-align: center;
+          border: 1px solid silver;
+          padding: 9px;
+          width: 155px;
+          right: 200px;
+          cursor: pointer;
+        }
+
+        .nav-user-profile {
+          .show {
+            padding: 0;
+            margin-left: 10px;
+          }
+        }
+
+        a {
+          padding: 0;
+
+          .user-dropdown {
+            padding: 0;
+
+            button {
+              background: none;
+              border: none;
+              color: white;
+              padding: 0;
+
+              img {
+                width: 50px;
+                border-radius: 85px;
+                padding: 0;
+              }
+            }
+          }
+        }
+
+        .navbar-toggler-container {
+          display: flex;
+          justify-content: flex-end;
+
+          #navbar-toggler-icon-close {
+            margin: 30px;
+            cursor: pointer;
+            background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+          }
+        }
+
+        .navbar-nav {
+          &:first-child {
+            padding-top: 50px;
+          }
+
+          .lang-switcher-destop {
+           display: none;
+          }
+
+          * {
+            padding: 10px 15px;
+
+            .user-profile-dropdown {
+              padding: 0;
+              color: white;
+
+              &:focus {
+                color: white;
+                box-shadow: none;
+              }
+
+              img {
+                width: 72px;
+              }
+            }
+
+            a {
+              color: #fff;
+              @include breakpoint(lg) {
+                font-size: 25px;
+              }
+              @include breakpoint(md) {
+                font-size: 18px;
+              }
+            }
+            
+             
+          }
+        }
+      }
+    }
+
+    .user-profile-dropdown:focus {
+      box-shadow: none;
+    }
+  }
+
+  .navbar-close-button {
+    margin-top: 20px;
+    margin-right: 25px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: 700;
+    padding: 0.65rem;
+    border-radius: 0.25rem;
+    font-size: 25px;
+    background: transparent;
+    cursor: pointer;
+  }
+ 
+  .clearsight-logo {
+    img {
+      max-height: 85px;
+
+      @include breakpoint(xs) {
+        max-height: 50px;
+      }
+    }
+  }
+
+  .hamburger-icon {
+    display: block;
+    transform: rotate(180deg);
+  }
+
+  .hamburger-icon .line {
+    width: 35px;
+    background: black;
+    margin: 6px 0 0 0;
+    height: 2px;
+    display: block;
+    transition: all 800ms cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  .button-hamburge-menu .line {
+    background: black;
+  }
+
+  .line-1 {
+    margin-top: 0;
+  }
+  .hamb-menu-logo {
+    text-align: center;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-evenly;
+
+    @include breakpoint(xl) {
+      display: none;
+    }
+
+    .lng-switcher {
+      align-self:center ;
+    }
+  }
+  .hamb-socials {
+    .container-social-media {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+
+      .round {
+        color: white;
+        border: 2px solid white;
+        font-size: 19px;
+        width: 43px;
+        border-radius: 50%;
+        height: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin: auto 15px;
+      }
+    }
+    @include breakpoint(xl) {
+      display: none;
+    }
+  }
+
+  .hamburger-icon:hover .line-1 {
+    width: 23px;
+  }
+
+  .hamburger-icon:hover .line-2 {
+    width: 33px;
+  }
+
+  .hamburger-icon:hover .line-3 {
+    width: 26px;
+  }
+}

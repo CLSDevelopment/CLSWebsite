@@ -1,0 +1,90 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.exchang-instantly-section {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 50px 0;
+
+  .jumbotrom-component {
+    .jumbotrom-header {
+      order: 1;
+    }
+
+    .platform-body {
+      align-self: center;
+
+      .section-title {
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 8.8px;
+        line-height: normal;
+        text-transform: uppercase;
+
+        @include breakpoint(sm) {
+          font-size: 13px;
+          text-align: center;
+        }
+
+        @include breakpoint(md) {
+          text-align: center;
+        }
+      }
+
+      .section-description {
+        color: #0a134f;
+        font-size: 50px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        @include breakpoint(sm) {
+          font-size: 29px;
+          text-align: center;
+        }
+
+        @include breakpoint(md) {
+          text-align: center;
+          font-size: 29px;
+        }
+      }
+
+      .section-text {
+        opacity: 60%;
+        color: #010101;
+        font-size: 17px;
+        font-weight: 400;
+        letter-spacing: normal;
+        line-height: 35px;
+        text-align: left;
+
+        @include breakpoint(sm) {
+          font-size: 15px;
+          text-align: center;
+        }
+
+        @include breakpoint(md) {
+          font-size: 15px;
+          text-align: center;
+          max-width: 550px;
+          margin: 0 auto;
+        }
+      }
+
+      .section-button {
+        width: 100%;
+        max-width: 166px;
+        height: 58px;
+        display: block;
+
+        @include breakpoint(sm) {
+          width: 100%;
+          max-width: 131px;
+          height: 46px;
+          display: block;
+          margin: 20px auto;
+        }
+
+        @extend %section-button;
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.slider {
+  max-width: 1250px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 15;
+
+  @include breakpoint(xl) {
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 150px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:focus {
+      outline: 0;
+    }
+
+    .flip-card:hover .flip-card-inner,
+    .flip-card:focus .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+    }
+
+    .flip-card-front {
+      z-index: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flip-card-back {
+      transform: rotateY(180deg);
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .beacme-partner-btn {
+    text-decoration: none;
+  }
+  .button-megatron-orange {
+    display: none;
+
+    @include breakpoint(xl) {
+      display: block;
+      width: 100%;
+      max-width: 166px;
+      padding: 18px;
+      background-color: #f99f2a;
+      background-image: linear-gradient(to top, #f04e21 0%, #f8a02c 100%);
+      border: none;
+      border-radius: 5px;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    @include breakpoint(xs) {
+      margin: 0 auto;
+      max-width: 130px;
+      font-size: 12px;
+      padding: 12px;
+    }
+  }
+
+  .slick-slide {
+    &:focus,
+    a {
+      outline: none;
+    }
+  }
+  .slick-slide div {
+    outline: none;
+  }
+
+  img {
+    width: 100%;
+    max-width: 245px;
+    display: block;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 17px;
+    border-radius: 10px;
+    border: 2px solid rgba(10, 19, 79, 0.1);
+
+    &:hover {
+      border: 3px solid #fab41d;
+      max-width: 265px;
+      z-index: 20;
+    }
+
+    @include breakpoint(sm) {
+      width: 95%;
+    }
+    @include breakpoint(lg) {
+      width: 85%;
+    }
+  }
+
+  .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+
+    list-style-type: none;
+
+    li {
+      margin: 0 0.25rem;
+    }
+
+    button {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      padding: 0;
+
+      border: 2px solid lightgrey;
+      border-radius: 100%;
+      background-color: white;
+
+      text-indent: -9999px;
+    }
+
+    li.slick-active button {
+      background-color: #f14e22;
+      border: none;
+    }
+  }
+
+  .slick-slider {
+    padding: 60px 0;
+
+    @include breakpoint(md) {
+      padding: 50px 0;
+    }
+    .slick-arrow {
+      @include breakpoint(md) {
+        display: none !important;
+      }
+      @include breakpoint(xl) {
+        display: none !important;
+      }
+      @include breakpoint(lg) {
+        display: none !important;
+      }
+    }
+  }
+}

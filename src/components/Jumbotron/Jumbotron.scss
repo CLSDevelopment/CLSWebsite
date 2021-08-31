@@ -1,0 +1,40 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.jumbotrom-component {
+  margin: 0 auto !important;
+  max-width: 1250px;
+
+
+  @include breakpoint(lg) {
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto !important;
+  }
+
+  .jumbotrom-header {
+    @include breakpoint(md) {
+      order: 1;
+      margin: 20px auto;
+    }
+
+    .jumbotrom-image {
+      width: 100%;
+
+      @include breakpoint(md) {
+        max-width: 500px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    @keyframes right {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+  }
+}

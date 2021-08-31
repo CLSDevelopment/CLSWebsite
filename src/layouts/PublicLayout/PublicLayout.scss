@@ -1,0 +1,36 @@
+@import "Variable.scss";
+
+@font-face {
+  font-family: "Mont", sans-serif;
+  font-weight: 300;
+  src: url("../../assets/font/Mont-Bold.otf");
+}
+
+@font-face {
+  font-family: "Mont";
+  font-weight: 400;
+  src: url("../../assets/font/Mont-Regular.otf");
+}
+
+// @font-face {
+//     font-family: 'Mont';
+//     font-weight: 600;
+//     src: url('../../assets/font/');
+// }
+
+@font-face {
+  font-family: "Mont";
+  font-weight: 700;
+  src: url("../../assets/font/Mont-Bold.otf");
+}
+
+@font-face {
+  font-family: "Mont";
+  font-weight: 800;
+  src: url("../../assets//font/Mont-Heavy.otf");
+}
+
+body {
+  overflow-x: hidden;
+}
+

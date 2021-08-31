@@ -1,0 +1,23 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.container-list-item {
+  .list-item {
+    margin: 15px auto;
+    padding: 19px 23px;
+    display: flex;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    align-items: center;
+
+    .icon-list-item {
+      width: 28px;
+    }
+
+    .list-item-title {
+      color: #0a134f;
+      font-size: 17px;
+      font-weight: 400;
+      margin-left: 15px;
+    }
+  }
+}

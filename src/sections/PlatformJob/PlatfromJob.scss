@@ -1,0 +1,79 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.conainer-platform-jobs {
+  background-color: #f5f9ff;
+
+  .react-tabs__tab-list {
+    display: none;
+  }
+  .title-jobs {
+    color: #0a134f;
+    font-size: 64px;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    @include breakpoint(md) {
+      font-size: 40px;
+    }
+    @include breakpoint(sm) {
+      font-size: 30px;
+    }
+  }
+  .item-conatiner {
+    padding: 50px;
+
+    .item-list {
+      margin: 0 auto;
+      display: block;
+      max-width: 250px;
+      border-right: 1px solid #cbdefd;
+
+      @include breakpoint(sm) {
+        padding: 10px;
+        border-right: none;
+        border-top: 1px solid #cbdefd;
+      }
+
+    }
+      .item-list-top{
+        margin: 0 auto;
+      display: block;
+      max-width: 250px;
+      border-right: 1px solid #cbdefd;
+
+      @include breakpoint(sm) {
+        padding: 10px;
+        border-right: none;
+        
+      
+      }
+
+    }
+    .item-list-bottom {
+      margin: 0 auto;
+      display: block;
+      max-width: 250px;
+      @include breakpoint(sm) {
+        border-top: 1px solid #cbdefd;
+        padding: 10px;
+      }
+    }
+
+    .list-img {
+      margin-right: 10px;
+    }
+    .title-items {
+      color: #ababab;
+      font-size: 17px;
+      font-weight: 400;
+      padding: 1px;
+    }
+    .title-items:hover {
+      color: #f14e22;
+      cursor: pointer;
+    }
+  }
+}

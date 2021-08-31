@@ -1,0 +1,71 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.slider-testimonials {
+  max-width: 1250px;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  z-index: 15;
+
+  .slick-list {
+    height: 380px;
+  }
+  .slick-slide {
+    &:focus,
+    a {
+      outline: none;
+    }
+  }
+  .slick-slide div {
+    outline: none;
+  }
+
+  .slick-dots {
+    display: flex !important;
+    justify-content: center;
+    padding: 1rem 0;
+
+    list-style-type: none;
+
+    li {
+      margin: 0 0.25rem;
+    }
+
+    button {
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      padding: 0;
+
+      border: 2px solid lightgrey;
+      border-radius: 100%;
+      background-color: white;
+
+      text-indent: -9999px;
+    }
+
+    li.slick-active button {
+      background-color: #f14e22;
+      border: none;
+    }
+  }
+
+  .slick-slider {
+    padding: 60px 0;
+
+    @include breakpoint(md) {
+      padding: 50px 0;
+    }
+    .slick-arrow {
+      @include breakpoint(md) {
+        display: none !important;
+      }
+      @include breakpoint(xl) {
+        display: none !important;
+      }
+      @include breakpoint(lg) {
+        display: none !important;
+      }
+    }
+  }
+}

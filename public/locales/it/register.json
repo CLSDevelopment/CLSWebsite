@@ -1,0 +1,10 @@
+{
+    "title" : "REGISTER IT",
+    "labelName": "Name - IT",
+    "labelSurname": "Surname - IT",
+    "labelEmail": "Email - IT",
+    "labelRole": "labelRole - IT",
+    "labelPassword": "Password - IT",
+    "labelConfirmPassword": "Confirm Password - IT",
+    "buttonRegister": "Register - IT"
+}

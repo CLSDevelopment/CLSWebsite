@@ -1,0 +1,54 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.container-platform-skill {
+  background: #f5f9ff;
+
+  .sub-container-platform-skill {
+    max-width: 1250px;
+    display: block;
+    margin: 0 auto;
+
+    .row-platform-skill {
+      align-items: center;
+
+      .sub-title {
+        font-size: 22px;
+        font-weight: 400;
+        letter-spacing: 8.8px;
+
+        @include breakpoint(sm) {
+          text-transform: uppercase;
+          text-align: center;
+        }
+      }
+
+      .title {
+        color: #0a134f;
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 60px;
+        text-transform: uppercase;
+
+        @include breakpoint(sm) {
+           font-size: 30px;
+           font-weight: 700;
+          line-height: 35px;
+          text-align: center;
+        }
+      }
+
+      .description {
+        color: #0a134f;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 35px;
+
+        @include breakpoint(sm) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+

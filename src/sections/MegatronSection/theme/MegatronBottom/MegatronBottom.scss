@@ -1,0 +1,116 @@
+@import "~layouts/PublicLayout/Variable.scss";
+
+.container-megatron {
+  background: linear-gradient(to top, #3481f3 0%, #091d80 100%);
+  padding: 165px 0 0;
+  position: relative;
+  height: 800px;
+
+  .megatron-full-width {
+    display: block;
+    max-width: 1250px;
+    margin: 0 auto;
+    justify-content: center;
+
+    @include breakpoint(md) {
+      display: block;
+    }
+
+    @include breakpoint(lg) {
+      display: block;
+    }
+
+    .description-clearsight {
+      font-weight: 800px;
+      font-size: 60px;
+
+      @include breakpoint(md) {
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+    .footer-description-clearsight {
+      margin-left: 10px;
+      font-size: 55px;
+      align-self: center;
+      @include breakpoint(md) {
+        font-size: 31px;
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    height: 600px;
+  }
+
+  .megatron {
+    max-width: 1250px;
+    margin: 0 auto;
+  }
+  .title-clearsight {
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 9.6px;
+    line-height: 67.87px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+
+    @include breakpoint(md) {
+      font-size: 18px;
+      letter-spacing: 7.6px;
+      line-height: 50.87px;
+    }
+  }
+
+  .description-clearsight {
+    text-shadow: 0 4px 13px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    font-size: 55px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint(md) {
+      font-size: 35px;
+    }
+  }
+
+  .footer-description-clearsight {
+    color: #fedc22;
+    font-size: 50px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 65px;
+    text-transform: uppercase;
+    text-align: center;
+
+    @include breakpoint(md) {
+      line-height: 40px;
+      font-size: 32px;
+    }
+
+    span {
+      color: white;
+    }
+  }
+
+  .container-megatron-image {
+    position: absolute;
+    z-index: 15;
+    right: 0;
+    left: 0;
+
+    .megatron-image {
+      max-width: 1200px;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.container--ocean {
+  height: 200px;
+  overflow: hidden;
+  margin-top: -5px;
+  margin-bottom: -5px;
+
+  .wave {
+    height: 100%;
+    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    transform: translate3d(0, 0, 0);
+  }
+
+  .wave:nth-of-type(2) {
+    margin-top: -150px;
+    margin-left: 100px;
+    animation: wave 4s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite,
+      swell 4s ease -1.25s infinite;
+    opacity: 1;
+  }
+
+  @keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+
+  @keyframes swell {
+    0%,
+    100% {
+      transform: translateY(-25px);
+    }
+    50% {
+      transform: translateY(5px);
+    }
+  }
+}

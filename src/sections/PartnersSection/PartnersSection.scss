@@ -1,0 +1,27 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+.continaer-partner-section {
+  padding: 40px 0;
+  .slider-desctiprion {
+    color: #0a134f;
+    font-size: 50px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    @include breakpoint(md) {
+      font-size: 37px;
+    }
+  }
+
+  .slider-title {
+    font-size: 22px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 8.8px;
+    line-height: normal;
+    text-align: center;
+  }
+}

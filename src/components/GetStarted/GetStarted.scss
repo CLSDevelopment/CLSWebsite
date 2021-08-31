@@ -1,0 +1,196 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
+
+.get-started {
+  background-color: #f5f9ff;
+
+  .get-started-contianer {
+    max-width: 1250px;
+    margin: 0px auto !important;
+
+    .card-gs {
+      @include breakpoint(lg) {
+        margin: 15px auto;
+      }
+    }
+
+    .card-gs-header {
+      position: relative;
+      max-width: 223px;
+      max-height: 224px;
+      box-shadow: 0 9px 16px rgba(0, 0, 0, 0.06);
+      border: 2px solid rgba(19, 15, 78, 0.08);
+      background-color: #ffffff;
+      border-radius: 8px;
+      margin: 0 auto;
+
+      @include breakpoint(xs) {
+        width: 145px;
+        height: 151px;
+      }
+
+      img {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+        display: block;
+        padding: 30px;
+      }
+    }
+
+    .card-badge {
+      position: absolute;
+      top: -20px;
+      left: -40px;
+      padding: 15px;
+      border: none;
+      color: white;
+      background-image: linear-gradient(73deg, #f04e21 0%, #f8a02c 100%);
+      border-radius: 60px;
+      font-size: 30px;
+    }
+
+    .card-gs-body {
+      .title {
+        max-width: 350px;
+        color: #130f4e;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 30px;
+        margin: 10px auto;
+        text-align: center;
+      }
+
+      .description {
+        max-width: 272px;
+        opacity: 0.6;
+        color: #010101;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+
+    .first-arrow {
+      margin: 0 auto;
+
+      .arrow-up {
+        margin: 80px auto;
+
+        @include breakpoint(lg) {
+          display: none;
+        }
+      }
+
+      .arrow-right {
+        // @include breakpoint(xxl) {
+        //   display: none;
+        // }
+
+        // @include breakpoint(xl) {
+        //   display: none;
+        // }
+
+        // @include breakpoint(lg) {
+        //   display: none;
+        // }
+
+        // @include breakpoint(sm) {
+        //   position: absolute;
+        //   bottom: -40px;
+        //   left: 100%;
+        //   display: block;
+        // }
+        display: none;
+      }
+    }
+
+    .second-arrow {
+      margin: 0 auto;
+      align-self: center;
+
+      .arrow-down {
+        margin: 0 auto;
+        align-self: center;
+        margin-bottom: 55px;
+
+        @include breakpoint(lg) {
+          display: none;
+        }
+      }
+
+      .arrow-left {
+        // @include breakpoint(xxl) {
+        //   display: none;
+        // }
+        // @include breakpoint(xl) {
+        //   display: none;
+        // }
+        // @include breakpoint(lg) {
+        //   display: none;
+        // }
+
+        // @include breakpoint(sm) {
+        //   position: absolute;
+        //   display: block;
+        //   top: -130px;
+        //   left: -40px;
+        // }
+        display: none;
+      }
+    }
+  }
+  .gs-section {
+    margin: 0px auto;
+    padding: 70px;
+
+    @include breakpoint(xs) {
+      padding: 0;
+      padding-bottom: 20px;
+    }
+
+    .gs-section-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 8.8px;
+      line-height: normal;
+
+      @include breakpoint(sm) {
+        font-size: 15px;
+        text-transform: uppercase;
+      }
+    }
+    .gs-section-description {
+      color: #0a134f;
+
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 60px;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0 auto;
+
+      @include breakpoint(sm) {
+        font-size: 28px;
+        line-height: 45px;
+      }
+    }
+    .section-button {
+      width: 100%;
+      max-width: 226px;
+      height: 64px;
+      display: block;
+      text-transform: uppercase;
+      margin: 0 auto;
+      @extend %section-button;
+
+      @include breakpoint(sm) {
+        max-width: 149px;
+        height: 43px;
+      }
+    }
+  }
+}
