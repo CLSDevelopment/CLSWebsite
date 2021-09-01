@@ -1,9 +1,10 @@
 import { Footer, GetStarted, Newslatter } from "components";
 import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
-import Head from "next/head"
+import {Helmet} from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { AccessToCryptoSection, BuyCryptoSection, ExchangeInstantlySection, MegatronSection } from "sections";
 import megatronPhoto from "../../assets/images/wallet-megatron-img.svg"
+
 export default () => {
 
   const {t} = useTranslation("wallet")
@@ -39,9 +40,9 @@ export default () => {
   return (
     <div className="wallet">
       <PublicLayout>
-      <Head>
+      <Helmet>
         <title>Wallet</title>
-      </Head>
+      </Helmet>
       <MegatronSection props={walletMeagtronColmn} />
       <AccessToCryptoSection />
       <BuyCryptoSection />

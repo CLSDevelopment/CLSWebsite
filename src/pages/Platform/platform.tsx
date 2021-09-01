@@ -1,10 +1,12 @@
 import Head from "next/head";
+import { useTranslation } from "react-i18next";
+import {Helmet} from "react-helmet";
 import { CardsSection, FindWorkSection, MegatronSection, PlatformJob, PlatformSkill, TestimonialsSection } from "sections";
-import { Cards, Footer, Newslatter, SkilsComponent } from "components";
+import { Cards, Footer, Newslatter} from "components";
 
 import megatronPhoto from "../../assets/images/platform-megatron-img.svg";
 import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
-import { useTranslation } from "react-i18next";
+
 
 export default () => {
 
@@ -25,9 +27,9 @@ export default () => {
   return (
     <div className="platform">
       <PublicLayout>
-      <Head>
+      <Helmet>
         <title>Platform</title>
-      </Head>
+      </Helmet>
       <MegatronSection props={PlatformMeagtronColmn} />
       <CardsSection
         title={"ClearSight"}

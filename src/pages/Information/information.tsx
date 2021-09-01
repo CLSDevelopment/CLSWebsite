@@ -1,11 +1,11 @@
 import { Footer, Newslatter } from 'components';
 import { PublicLayout } from 'layouts/PublicLayout/PublicLayout';
-import Head from 'next/head';
+import {Helmet} from "react-helmet";
 import { useTranslation } from 'react-i18next';
 import { InfoContentSection, MegatronSection, QuestionSection } from 'sections';
 
 export default () => {
-  
+
   const {t} = useTranslation("information")
   
   const InformationMegatronProps = {
@@ -19,6 +19,9 @@ export default () => {
 
   return (
     <PublicLayout>
+      <Helmet>
+        <title>Information</title>
+      </Helmet>
       <MegatronSection props={InformationMegatronProps} />
       <InfoContentSection />
       <QuestionSection />

@@ -99,8 +99,8 @@ export const MegatronColumn: React.FC<MegatronColumnProps> = ({
 
             {iconArea && (
               <div className="megtron-icon">
-                <img className="icon-megatron-right" src={iconArea.iconFirst} />
-                <img className="icon-megatron-left" src={iconArea.iconSecond} />
+                <img className="icon-megatron-right" alt="megatron" src={iconArea.iconFirst} />
+                <img className="icon-megatron-left" alt="megatron" src={iconArea.iconSecond} />
               </div>
             )}
           </div>

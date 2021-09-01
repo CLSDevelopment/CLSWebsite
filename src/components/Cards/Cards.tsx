@@ -4,7 +4,7 @@ import logo1 from "../../assets/images/card-img-2.svg";
 import logo2 from "../../assets/images/iStock-1084096262.svg";
 
 import "./Cards.scss";
-import { LanguageSwitcher } from "components/LanguageSwitcher/LanguageSwitcher";
+
 import { useTranslation } from "react-i18next";
 
 

@@ -1,5 +1,3 @@
-import React from "react";
-import { Switch, Link } from "react-router-dom";
 import FooterLogo from "assets/icon/logo-footer.png";
 import { Wave } from "../Wave/Wave";
 
@@ -25,7 +23,7 @@ export const Footer = () => {
               {t("footer-description")}
             </p>
             <div className="container-social-media">
-              <a href="https://www.facebook.com/clearsight.finance" target="_blank" className="fa fa-facebook round" />
+              <a href="https://www.facebook.com/clearsight.finance" target="_blank" rel="noreferrer" className="fa fa-facebook round" />
               <a className="fa fa-twitter round" />
               <a href="https://t.me/clearsightfinance" target="_blank" className="fa fa-telegram round" />
             </div>
@@ -59,6 +57,7 @@ export const Footer = () => {
                 <a
                   href="https://drive.google.com/file/d/1IA27S3gRBxBktVMCak-AApbhMGiAJm2s/view?usp=sharing"
                   target="_blank"
+                  rel="noreferrer"
                 >
                  {t("whitepaper")}
                 </a>
@@ -87,6 +86,7 @@ export const Footer = () => {
               <a
                 href="https://www.iubenda.com/terms-and-conditions/49402867"
                 target="_blank"
+                rel="noreferrer"
               >
                 {t("terms-conditions")}
               </a>
