@@ -1,14 +1,17 @@
-import Head from 'next/head';
 import megatrgonPhoto from '../../assets/images/debit-card-megatron.svg';
 import iconAtm from '../../assets/icon/atm.svg';
 import { DebitCardCryptocurrencies, MegatronSection } from 'sections';
 import { Footer, GetStarted, Newslatter } from 'components';
 import { PublicLayout } from 'layouts/PublicLayout/PublicLayout';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 export default () => {
 
   const {t} = useTranslation("debitCard")
+  useEffect(() => {
+    document.title = "Debit Card"
+  })
 
   const DebitCardMegatronColmn = {
     type: 'megatron_column',
@@ -32,7 +35,7 @@ export default () => {
   const secondCard = [
     {
       title: t("gs-card-title-two"),
-      description: t("gs-card-description-one"),
+      description: t("gs-card-description-two"),
     },
   ];
   const thirdCard = [

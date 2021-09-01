@@ -1,39 +1,51 @@
-
 .select-language-component {
-    button {
-        cursor: pointer;
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly !important; 
-        align-items: center;
-        padding: 5px 5px !important;
-        /* color: white; */
-        /* border: thin solid rgba(77, 77, 77, 0.3); */
-        /* border-radius: 4px; */
-        background: transparent;
-        border: none !important;
-        // background-color: white;
-        border-radius: 5px;
-    }
-    ul {
-        display: block !important;
-        overflow-x: hidden !important;
-    
-        
-    }
+  button {
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly !important;
+    align-items: center;
+    padding: 5px 5px !important;
+    background: transparent;
+    border: none !important;
+    border-radius: 5px;
+  }
+  ul {
+    display: block !important;
+    overflow-x: hidden !important;
+  }
 
-    span{
-        color:grey !important;
-    }
+  span {
+    color: grey !important;
+  }
 
+  span:hover {
+    color: #031530 !important;
+    font-weight: 600;
+  }
+
+  li:hover {
+    background: #3481f3;
+    color: yellow !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 5px;
+  }
+   
+ 
+  ::-webkit-scrollbar-thumb {
+    background: #3481f3; 
+    border-radius: 10px;
+  }
   
-        span:hover{
-        color: #031530 !important;
-        font-weight: 600;
-        }
 
-    li:hover{
-        background: #3481f3 ;
-        color: yellow !important;
-    }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3481f3; 
+  }
 }

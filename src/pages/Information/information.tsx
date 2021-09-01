@@ -1,11 +1,16 @@
 import { Footer, Newslatter } from 'components';
 import { PublicLayout } from 'layouts/PublicLayout/PublicLayout';
 import Head from 'next/head';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { InfoContentSection, MegatronSection, QuestionSection } from 'sections';
 
 export default () => {
   
+  useEffect(() => {
+    document.title = "Information"
+  })
+
   const {t} = useTranslation("information")
   
   const InformationMegatronProps = {

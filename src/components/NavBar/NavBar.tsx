@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { Switch, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "components/LanguageSwitcher/LanguageSwitcher";
 import closeImg from "../../assets/images/close.svg";
@@ -113,11 +113,11 @@ export const NavBar = () => {
           aria-label="Toggle navigation"
           onClick={toggleExpand}
         >
-          <a className={navbarBurgerMenu.join(" ")} title="Menu">
+          <span className={navbarBurgerMenu.join(" ")} title="Menu">
             <span className="line line-1"></span>
             <span className="line line-2"></span>
             <span className="line line-3"></span>
-          </a>
+          </span>
         </button>
 
         <div

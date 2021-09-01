@@ -5,8 +5,13 @@ import { Cards, Footer, Newslatter} from "components";
 import megatronPhoto from "../../assets/images/platform-megatron-img.svg";
 import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 export default () => {
+
+  useEffect(() => {
+    document.title = "Platform"
+  })
 
   const {t} = useTranslation("platform")
 

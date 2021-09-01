@@ -1,11 +1,16 @@
 import { Footer, GetStarted, Newslatter } from "components";
 import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
 import Head from "next/head"
+import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { AccessToCryptoSection, BuyCryptoSection, ExchangeInstantlySection, MegatronSection } from "sections";
 import megatronPhoto from "../../assets/images/wallet-megatron-img.svg"
 
 export default () => {
+
+  useEffect(() => {
+    document.title = "Wallet"
+  })
 
   const {t} = useTranslation("wallet")
 

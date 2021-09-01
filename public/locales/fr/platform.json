@@ -1,0 +1,88 @@
+{
+    "platform-title": "Rejoignez la plus grande",
+    "platform-description": "plateforme d'emploi basée sur la ",
+    "platform-description-optional" : "  blockchain au monde",
+    "platform-text-area": "Nous utilisons toute la puissance de la blockchain pour avoir la meilleure plateforme d'emploi au monde.",
+    "platform-button-white": "En savoir plus",
+    "platform-button-transparent": "Trouver un emploi",
+
+    "card-section-description": "Trouvez des talents à votre façon",
+    "card-section-text-area": "Parcourez notre plateforme pour trouver les meilleurs talents correspondant à vos besoins.",
+    
+    "card-platform-title-first": "Publiez un travail et engagez un professionnel",
+    "card-platform-description-first": "TLes talents répertoriés sur notre plateforme sont des professionnels de haut niveau.",
+    "card-platform-title-second": "Parcourez et achetez des projets prêts à l'emploi",
+    "card-platform-description-second": "Notre plateforme propose également des produits finis et des sites web pour vos besoins.",
+    "card-platform-title-third": "Laissez-nous vous aider",
+    "card-platform-description-third": "Clearsight propose un gestionnaire de projet pour tous les grands projets, pour un coût supplémentaire minime.",
+
+    "platform-skill-title": "ENGAGER UN PRO POUR TOUTE COMPÉTENCE",
+    "platform-skill-description": "Nous sommes fiers de dire que nous avons l'une des plus grandes offres d'emploi, donc trouver votre employé ou votre travail sera plus facile que jamais!",
+
+    "platform-skill-heading-one": "Dev&IT",
+    "platform-skill-heading-two": "Conception et création",
+    "platform-skill-heading-three": "Ventes et marketing",
+    "platform-skill-heading-four": "Rédaction et traduction",
+    "platform-skill-heading-five": "Assistance à la clientèle",
+    "platform-skill-heading-six": "Finance et comptabilité",
+
+    "devIt-job-one": "Ingénierie web",
+    "devIt-job-two": "Ingénierie logicielle",
+    "devIt-job-three": "Développement mobile",
+    "devIt-job-four": "Assurance qualité",
+    "devIt-job-five": "Développement de blockchain",
+    "devIt-job-six": "Devops & Sysops",
+    "devIt-job-seven": "Cyber sécurité",
+    "devIt-job-eight": "Ingénierie des bases de données",
+
+    "designCreative-job-one": "Conception Web",
+    "designCreative-job-two": "Graphic Design",
+    "designCreative-job-three": "Design de marque",
+    "designCreative-job-four": "Art&illustration",
+    "designCreative-job-five": "Emballages et étiquettes",
+    "designCreative-job-six": "Design visuel et d'impression",
+    "designCreative-job-seven": "Design de mode",
+    "designCreative-job-eight": "Design d'architecture",
+
+    "salesAndMarketing-job-one": "Médias sociaux",
+    "salesAndMarketing-job-two": "SEO",
+    "salesAndMarketing-job-three": "Relations publiques",
+    "salesAndMarketing-job-four": "Marketing immobilier",
+    "salesAndMarketing-job-five": "Gestionnaire des ventes",
+    "salesAndMarketing-job-six": "Collecteurs de fonds",
+    "salesAndMarketing-job-seven": "Marketing de contenu et vidéo",
+    "salesAndMarketing-job-eight": "Marketing physique (panneaux d'affichage)",
+
+    "writingAndTranslation-job-one": "Articles et publications de blog",
+    "writingAndTranslation-job-two": "Relecture",
+    "writingAndTranslation-job-three": "Édition",
+    "writingAndTranslation-job-four": "Traductions multilingues",
+    "writingAndTranslation-job-five": "Rédaction de livres",
+    "writingAndTranslation-job-six": "Rédaction de présentations",
+    "writingAndTranslation-job-seven": "Communiqués de presse",
+    "writingAndTranslation-job-eight": "Rédaction de scénarios",
+
+    "customerSupport-job-one" : "Assistants virtuels",
+    "customerSupport-job-two": "Assistants de discussion instantanée (chat)",
+    "customerSupport-job-three": "Assistants pour le support des tickets",
+    "customerSupport-job-four": "Conseil en assistance",
+
+    "financeAccounting-job-one": "Conseil financier",
+    "financeAccounting-job-two": "Contrôleur financier",
+    "financeAccounting-job-three": "Conseils en affaires",
+    "financeAccounting-job-four": "Gestion des comptes",
+    "financeAccounting-job-five": "Conseil en blockchain",
+    "financeAccounting-job-six": "Gestion des crypto-monnaies",
+    "financeAccounting-job-seven": "Relations commerciales",
+    "financeAccounting-job-eight": "Gestion de projets et de produits",
+
+    "find-work-description": "Find great work",
+    "find-work-text": "Whether you are a freelancer or someone looking for a side gig, this is the best place to find work easily and get paid without paying huge fees.",
+    "first-icon-text": "90% lower commisions compared to our competitors",
+    "second-icon-text": "Earn money while you finish other tasks by keeping your crypto in your wallet",
+    "third-icon-text": "More work opportunitues arise the more tasks you finish",
+
+    "testimonials-description": "Ce qu'ils disent",
+
+    "platform-job-title": "Les meilleures compétences"
+}

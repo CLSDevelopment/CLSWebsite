@@ -10,9 +10,14 @@ import megatronImage from '../../assets/images/home-image.svg';
 import Head from 'next/head';
 import { PublicLayout } from 'layouts/PublicLayout/PublicLayout';
 import { useTranslation } from 'react-i18next';
+import { useEffect } from 'react';
 
 export default () => {
   const {t} = useTranslation("home")
+
+  useEffect(() => {
+    document.title = "Home"
+  })
 
   const HomeMegatronBottom = {
     type: 'megatron_bottom',

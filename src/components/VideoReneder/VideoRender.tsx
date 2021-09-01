@@ -15,7 +15,7 @@ export const VideoRender:React.FC<VideoProps> = ({url,close}) => {
         <>
             
             <ReactPlayer url={url} playing  />
-            <a className="close-video-button"  onClick={close}>Close me</a>
+            <button className="close-video-button"  onClick={close}>Close me</button>
 
             
             
