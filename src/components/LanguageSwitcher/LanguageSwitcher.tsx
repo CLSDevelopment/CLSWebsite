@@ -30,8 +30,8 @@ export const LanguageSwitcher = () => {
     <div className="select-language-component">
 
       <ReactFlagsSelect
-        countries={["GB", "DE", "IT", "RU","FR", "ES"]}
-        customLabels={{ GB: "EN", FR: "FR", DE: "DE", IT: "IT", ES: "ES", RU: "RU" }}
+        countries={["GB", "DE", "IT", "RU","FR", "ES", "CN"]}
+        customLabels={{ GB: "EN", FR: "FR", DE: "DE", IT: "IT", ES: "ES", RU: "RU", CN: "CN"  }}
         selected={selected}
         showSelectedLabel={true}
         onSelect={(lang) => changeLanguage(lang)}

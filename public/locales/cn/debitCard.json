@@ -1,0 +1,20 @@
+{
+    "debit-card-title": "欢迎来到",
+    "debit-card-descriptionOptional": " 借记卡",
+    "debit-card-textArea" : "我们为用户提供自有借记卡，以便他们能轻松地提取收益。",
+    "debit-card-btn": "了解更多信息",
+
+    "debit-card-crypto-description": "你值得轻易地提取收益",
+    "debit-card-title-one":"VISA借记卡",
+    "debit-card-title-second":"180多个国家都接受该卡",
+    "debit-card-title-third":"合理限制",
+    "debit-card-title-fourth":"超低费用",
+    "debit-card-crypto-btn": "了解更多信息#",
+
+    "gs-card-title-one": "下载我们的手机钱包应用程序",
+    "gs-card-description-one": "提供iOS和安卓两种版本",
+    "gs-card-title-two": "订购您的借记卡并支付运费",
+    "gs-card-description-two": "我们将在10-15天内把它送到您的家庭住址所在地",
+    "gs-card-title-third": "在最近的自动取款机上激活",
+    "gs-card-description-third": "激活只需将卡放入自动取款机并检查您的余额。"
+}
