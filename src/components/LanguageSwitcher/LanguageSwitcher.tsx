@@ -7,7 +7,7 @@ import { getLocalLanguage, saveLocalLanguage } from "services/account";
 import "./LanguageSwitcher.scss";
 
 export const LanguageSwitcher = () => {
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState("GB");
  
   const { i18n } = useTranslation();
 
@@ -30,12 +30,11 @@ export const LanguageSwitcher = () => {
     <div className="select-language-component">
 
       <ReactFlagsSelect
-        countries={["GB", "DE", "IT", "RU","FR"]}
+        countries={["GB", "DE", "IT", "RU","FR", "ES"]}
         customLabels={{ GB: "EN", FR: "FR", DE: "DE", IT: "IT", ES: "ES", RU: "RU" }}
         selected={selected}
         showSelectedLabel={true}
         onSelect={(lang) => changeLanguage(lang)}
-
       /> 
     </div>
   );

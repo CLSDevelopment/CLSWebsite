@@ -45,6 +45,7 @@ export const NavBar = () => {
 
   const toggleExpand = () => {
     if (window.innerWidth < 1199) {
+      
       if (!expanded) {
         setExpended(!expanded);
 
@@ -69,10 +70,6 @@ export const NavBar = () => {
     }
   };
 
-  // function changebackground(color){
-  //   document.getElementById('das').style.backgroundColor = color;
-  // }
-   
 
   useEffect(() => {
     if (window.scrollY) {
@@ -107,7 +104,7 @@ export const NavBar = () => {
           className="navbar-toggler border-0"
           type="button"
           data-toggle="collapse"
-          data-target="#navbarSupportedContent"
+         data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded={expanded}
           aria-label="Toggle navigation"
