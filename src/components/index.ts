@@ -15,4 +15,4 @@ export { WaveSvg } from "./WaveSvg/WaveSvg";
 export {SkilsComponent} from "./SkilsComponent/SkilsComponent";
 export {ListItemJob} from "./ListItemJob/ListItemJob";
 export {SliderForTestimonails} from "./SliderForTestimonials/SliderForTestimonials"
-export {RouteSwitcher} from "./RouterSwitcher/RouteSwitcher"
+export {RouteSwitcher} from "./RouterSwitcher/RouteSwitcher";

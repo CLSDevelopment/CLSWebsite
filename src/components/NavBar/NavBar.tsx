@@ -44,7 +44,7 @@ export const NavBar = () => {
   ];
 
   const toggleExpand = () => {
-    if (window.innerWidth < 1199) {
+    if (window.innerWidth < 1199) { 
       if (!expanded) {
         setExpended(!expanded);
 
@@ -90,7 +90,7 @@ export const NavBar = () => {
       <nav className={navbarClasses.join(" ")} id="scroll_y">
         <div className="mr-auto">
           <a href="/" className="navbar-brand clearsight-logo">
-            <img src={logo} alt="clearsight" className="logo-destop" />
+            
             <img
               src={!!scrollPosition ? logo : logoWhite}
               className="logo-mobile"

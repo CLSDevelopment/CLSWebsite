@@ -25,24 +25,22 @@ export default () => {
   };
 
   return (
-    <div className="forgot-password">
-      <PublicLayout>
-        <Helmet>
-          <title>Home</title>
-        </Helmet>
-        <MegatronSection props={HomeMegatronBottom} />
-        <PartnersSection />
-        <WalletSection />
-        <PlatformSection />
-        <CardsSectionWithBg
-          title={t("card-section-title")}
-          description={t("card-section-description")}
-        >
-          <CardWithBackground />
-        </CardsSectionWithBg>
-        <Newslatter />
-        <Footer />
-      </PublicLayout>
-    </div>
+    <PublicLayout>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
+      <MegatronSection props={HomeMegatronBottom} />
+      <PartnersSection />
+      <WalletSection />
+      <PlatformSection />
+      <CardsSectionWithBg
+        title={t("card-section-title")}
+        description={t("card-section-description")}
+      >
+        <CardWithBackground />
+      </CardsSectionWithBg>
+      <Newslatter />
+      <Footer />
+    </PublicLayout>
   );
 };

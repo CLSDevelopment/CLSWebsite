@@ -19,13 +19,7 @@
     @include breakpoint(lg) {
       display: block;
     }
-  }
-  .logo-mobile {
-    display: block;
-
-    @include breakpoint(lg) {
-      display: none;
-    }
+  
   }
   .navbar {
     z-index: 50;
@@ -34,7 +28,7 @@
     background-color: transparent;
 
     @include breakpoint(lg) {
-      background-color: white;
+      background-color: transparent;
     }
 
     .user-profile {
@@ -254,10 +248,13 @@
     cursor: pointer;
   }
  
-  .clearsight-logo {
+  .clearsight-logo {  
     img {
-      max-height: 85px;
+      max-height: 95px;
 
+      @include breakpoint(md) {
+        max-height: 85px;
+      }
       @include breakpoint(xs) {
         max-height: 50px;
       }
@@ -271,7 +268,7 @@
 
   .hamburger-icon .line {
     width: 35px;
-    background: black;
+    background: white;
     margin: 6px 0 0 0;
     height: 2px;
     display: block;
