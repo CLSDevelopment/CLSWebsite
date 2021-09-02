@@ -15,7 +15,7 @@ export const SliderComponent: React.FC<SliderComponentType> = ({ data }) => {
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    initialSlide: 2,
+    initialSlide: 0,
     responsive: [
       {
         breakpoint: 992,
@@ -53,8 +53,8 @@ export const SliderComponent: React.FC<SliderComponentType> = ({ data }) => {
                   </div>
                   <div className="flip-card-back">
                
-                <a className="beacme-partner-btn" href = "mailto: admin@clearsight.finace">   <button className="button-megatron-orange">
-                   {t("became-partner")}
+                <a className="beacme-partner-btn" href={item.href} target="_blank"><button className="button-megatron-orange" >
+                   Open Link
                 </button></a>
                   </div>
                 </div>

@@ -21,7 +21,7 @@ export const NavBar = () => {
 
   const navbarClasses = [
     "navbar",
-    "fixed-top",
+    // "fixed-top",
     "navbar-expand-xl",
     !!scrollPosition && "scroll-shadow",
   ];
@@ -45,7 +45,6 @@ export const NavBar = () => {
 
   const toggleExpand = () => {
     if (window.innerWidth < 1199) {
-      
       if (!expanded) {
         setExpended(!expanded);
 
@@ -79,7 +78,7 @@ export const NavBar = () => {
       inputTag.style.background = "white";
   }
 
-    window.addEventListener("scroll", handleScroll);
+    // window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);

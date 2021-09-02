@@ -11,6 +11,7 @@
   justify-content: flex-end;
 }
 .container--custom--navbar {
+  position:absolute;
   width: 100%;
   .logo-destop {
     display: none;
@@ -30,6 +31,7 @@
     z-index: 50;
     max-width: 1250px;
     margin: 0 auto;
+    background-color: transparent;
 
     @include breakpoint(lg) {
       background-color: white;
@@ -92,7 +94,7 @@
       text-decoration: none;
       font-weight: 600;
       position: relative;
-      color: #fedc22;
+      // color: #fedc22;
 
       @extend %navigationTitle;
       padding-right: 0.5rem;
@@ -118,13 +120,18 @@
       position: relative;
       color: #fedc22;
 
+      @include breakpoint(lg) {
+        color: white;
+        font-weight: 800;
+      }
+
       &:hover {
         -webkit-text-stroke: 0px black;
       }
     }
 
     .no-active {
-      color:lightgray;
+      opacity: 50%;
     }
 
     .navbar-collapse-custom {
