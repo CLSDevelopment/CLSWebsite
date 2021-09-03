@@ -1,3 +1,6 @@
+import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
+import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
 import { CardWithBackground, Footer, Newslatter } from "components";
 import {
   CardsSectionWithBg,
@@ -6,10 +9,8 @@ import {
   PlatformSection,
   WalletSection,
 } from "sections";
+
 import megatronImage from "../../assets/images/home-image.svg";
-import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
-import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet";
 
 export default () => {
   const { t } = useTranslation("home");

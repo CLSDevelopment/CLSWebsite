@@ -14,20 +14,24 @@ export const CardsSectionWithBg: React.FC<CardsProps> = ({
   children,
   title,
   description,
-  textArea
+  textArea,
 }) => {
   return (
     <>
-    <Wave colorFirstWave={"#f5f9ff"} direction={"0"}/>
-    <div className="cards-section-bg">
-      <div className="card-title">
-        <p className="title">{title}</p>
-        <h1 className="description">{description}</h1>
-        { textArea && <p className="card-text-area">{textArea}</p>}
+      <Wave colorFirstWave={"#f5f9ff"} direction={"0"} />
+      <div className="cards-section-bg">
+        <div className="card-title">
+          <p className="title">{title}</p>
+          <h1 className="description">{description}</h1>
+          {textArea && <p className="card-text-area">{textArea}</p>}
+        </div>
+        <div className="card-body">{children}</div>
       </div>
-      <div className="card-body">{children}</div>
-    </div>
-    <Wave colorFirstWave={"#cbdefd"} colorSecoundWave={"#f5f9ff"} direction={"180"}/>
+      <Wave
+        colorFirstWave={"#cbdefd"}
+        colorSecoundWave={"#f5f9ff"}
+        direction={"180"}
+      />
     </>
   );
 };

@@ -1,13 +1,14 @@
-import { Footer, GetStarted, Newslatter } from "components";
-import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
-import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
+import { Helmet } from "react-helmet";
+import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
+import { Footer, GetStarted, Newslatter } from "components";
 import {
   AccessToCryptoSection,
   BuyCryptoSection,
   ExchangeInstantlySection,
   MegatronSection,
 } from "sections";
+
 import megatronPhoto from "../../assets/images/wallet-megatron-img.svg";
 
 export default () => {

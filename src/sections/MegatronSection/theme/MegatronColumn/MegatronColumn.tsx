@@ -40,8 +40,8 @@ export const MegatronColumn: React.FC<MegatronColumnProps> = ({
   const openMe = () => {
     if (showCard) {
       getShowCard(false);
-  
-      return (document.body.style.overflowY = "scroll")
+
+      return (document.body.style.overflowY = "scroll");
     }
     getShowCard(true);
     document.body.style.overflowY = "hidden";
@@ -99,8 +99,16 @@ export const MegatronColumn: React.FC<MegatronColumnProps> = ({
 
             {iconArea && (
               <div className="megtron-icon">
-                <img className="icon-megatron-right" alt="megatron" src={iconArea.iconFirst} />
-                <img className="icon-megatron-left" alt="megatron" src={iconArea.iconSecond} />
+                <img
+                  className="icon-megatron-right"
+                  alt="megatron"
+                  src={iconArea.iconFirst}
+                />
+                <img
+                  className="icon-megatron-left"
+                  alt="megatron"
+                  src={iconArea.iconSecond}
+                />
               </div>
             )}
           </div>

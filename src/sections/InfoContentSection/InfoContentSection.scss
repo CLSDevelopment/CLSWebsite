@@ -1,60 +1,22 @@
-
 @import "../../layouts/PublicLayout/Variable.scss";
-
 
 .contianer-info-content {
   margin: 0 auto;
   padding: 50px 0;
 
- .section-title {
-  text-align: center;
-  color: #0a134f;
-  font-size: 40px;
-  font-weight: 400;
-  text-transform: uppercase;
-  
-  @include breakpoint(md) {
-    font-size: 20px;
-  }
- }
- .section-description {
-  font-size: 64px;
-  color: #0a134f;
-  text-align: center;
-  font-weight: 700;
-  font-style: normal;
-  letter-spacing: normal;
-  line-height: 70px;
-  text-transform: uppercase;
-
-  @include breakpoint(md) {
+  .section-title {
+    text-align: center;
+    color: #0a134f;
     font-size: 40px;
-    line-height: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    @include breakpoint(md) {
+      font-size: 20px;
+    }
   }
- }
- .section-text {
-  opacity: 0.6;
-  color: #010101;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 35px;
-   padding: 40px 0;
-   text-align: center;
-   width: 100%;
-   max-width: 1200px;
-   display: block;
-   margin: 0 auto;
-
-   @include breakpoint(md){
-     font-size: 14px;
-   }
- }
- .solutions {
-   max-width: 1250px;
-   margin: 0 auto;
-
-   .solutions-title {
-    font-size: 24px;
+  .section-description {
+    font-size: 64px;
     color: #0a134f;
     text-align: center;
     font-weight: 700;
@@ -64,29 +26,65 @@
     text-transform: uppercase;
 
     @include breakpoint(md) {
-      line-height: 30px;
+      font-size: 40px;
+      line-height: 40px;
     }
-   }
+  }
+  .section-text {
+    opacity: 0.6;
+    color: #010101;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 35px;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
 
-   .solutions-text {
-     opacity: 0.6;
-  color: #010101;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 35px;
-   width: 100%;
-   max-width: 1200px;
-   display: block;
-   margin: 0 auto;
-   padding-bottom: 50px;
-   }
- .left-side {
-   max-width: 600px;
-   margin: 0 auto
- };
- .right-side {
-  max-width: 600px;
-  margin: 0 auto
-};
- }
+    @include breakpoint(md) {
+      font-size: 14px;
+    }
+  }
+  .solutions {
+    max-width: 1250px;
+    margin: 0 auto;
+
+    .solutions-title {
+      font-size: 24px;
+      color: #0a134f;
+      text-align: center;
+      font-weight: 700;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 70px;
+      text-transform: uppercase;
+
+      @include breakpoint(md) {
+        line-height: 30px;
+      }
+    }
+
+    .solutions-text {
+      opacity: 0.6;
+      color: #010101;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 35px;
+      width: 100%;
+      max-width: 1200px;
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 50px;
+    }
+    .left-side {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .right-side {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
 }

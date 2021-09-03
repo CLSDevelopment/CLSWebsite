@@ -1,4 +1,4 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 import { Wave } from "../../components";
 import { Tabs } from "../../components/Tabs/Tabs";
 import { ListItemJob } from "../../components";
@@ -10,7 +10,6 @@ import iconFive from "../../assets/icon/icon_tab_5.svg";
 import iconSix from "../../assets/icon/icon_tab_6.svg";
 
 import "./PlatformSkill.scss";
-import { useTranslation } from "react-i18next";
 
 export const PlatformSkill = () => {
   const { t } = useTranslation("platform");

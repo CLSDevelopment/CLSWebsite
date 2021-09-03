@@ -1,4 +1,3 @@
-import React from "react";
 import * as theme from "./theme";
 
 export const MegatronSection = ({ props }) => {

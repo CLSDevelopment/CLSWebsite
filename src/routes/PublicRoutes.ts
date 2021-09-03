@@ -1,30 +1,35 @@
-import { DebitCard, Home, Platform, Wallet, Information, NotFound } from 'pages';
-
+import {
+  DebitCard,
+  Home,
+  Platform,
+  Wallet,
+  Information,
+  NotFound,
+} from "pages";
 
 export const PublicRoutes = [
   {
     component: Home,
-    path: '/',
+    path: "/",
   },
   {
     component: Platform,
-    path: 'platform',
+    path: "platform",
   },
   {
     component: Wallet,
-    path: 'wallet',
+    path: "wallet",
   },
-  { 
-    component: DebitCard, 
-    path: 'debit-card' 
+  {
+    component: DebitCard,
+    path: "debit-card",
   },
   {
     component: Information,
-    path: "information"
+    path: "information",
   },
   {
     component: NotFound,
-    path: "*"
-  }
-
+    path: "*",
+  },
 ];

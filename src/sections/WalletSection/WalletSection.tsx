@@ -1,13 +1,11 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 import { Wave, Jumbotron } from "../../components";
 import image from "assets/images/wallet.svg";
 
 import "./WalletSection.scss";
-import { useTranslation } from "react-i18next";
 
 export const WalletSection = () => {
-
-  const {t} = useTranslation("home")
+  const { t } = useTranslation("home");
 
   return (
     <>
@@ -17,7 +15,9 @@ export const WalletSection = () => {
           <h3 className="section-title">{t("wallet-title")}</h3>
           <h1 className="section-description">{t("wallet-description")}</h1>
           <p className="section-text">{t("wallet-text")}</p>
-         <a href="/wallet" className="section-btn"> <button className="section-button">{t("wallet-btn")}</button> </a>
+          <a href="/wallet" className="section-btn">
+            <button className="section-button">{t("wallet-btn")}</button>{" "}
+          </a>
         </Jumbotron>
       </div>
       <Wave

@@ -1,18 +1,14 @@
-import React from "react";
 import { useTranslation } from "react-i18next";
 
 import "./InfoContentSection.scss";
 
 export const InfoContentSection = () => {
-
-  const {t} = useTranslation("information")
+  const { t } = useTranslation("information");
 
   return (
     <section className="contianer-info-content">
       <h1 className="section-description">{t("info-content-description")}</h1>
-      <p className="section-text">
-     {t("info-content-text-about-us")}
-      </p>
+      <p className="section-text">{t("info-content-text-about-us")}</p>
       <div className="row solutions">
         <div className="col-md-6 left-side">
           <h3 className="solutions-title">{t("solution-freelancer")}</h3>
@@ -25,7 +21,7 @@ export const InfoContentSection = () => {
           </ul>
         </div>
         <div className="col-md-6 right-side">
-        <h3 className="solutions-title">{t("solution-employer")}</h3>
+          <h3 className="solutions-title">{t("solution-employer")}</h3>
           <ul className="solutions-text">
             <li>{t("solution-text-employer-five")}</li>
             <li>{t("solution-text-employer-second")}</li>

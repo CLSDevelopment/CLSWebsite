@@ -1,13 +1,12 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 import { TabsForJobs } from "../../components/TabsForJobs/TabsForJobs";
-import "./PlatfromJob.scss";
 import { Wave } from "../../components";
 import { SkilsComponent } from "../../components/SkilsComponent/SkilsComponent";
-import { useTranslation } from "react-i18next";
+
+import "./PlatfromJob.scss";
 
 export const PlatformJob = () => {
-
-  const {t} = useTranslation("platform")
+  const { t } = useTranslation("platform");
 
   const listOfJobs = [
     { job: "Data Entry Specialists" },
@@ -46,15 +45,15 @@ export const PlatformJob = () => {
   return (
     <>
       <div className="conainer-platform-jobs">
-      <h1 className="title-jobs">{t("platform-job-title")}</h1>
+        <h1 className="title-jobs">{t("platform-job-title")}</h1>
         <TabsForJobs data={data} />
-        </div>
-   
+      </div>
+
       <Wave
         colorFirstWave="#cbdefd"
         colorSecoundWave={"#f5f9ff"}
         direction="180"
-      /> 
+      />
     </>
   );
 };

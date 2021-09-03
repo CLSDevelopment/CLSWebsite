@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Wave } from "../../../../components";
 
 import "./MegatronBottom.scss";
@@ -11,7 +10,7 @@ type MegatronBottomProps = {
   descriptionBoldYellow?: string;
   img?: string;
   typeOfTitle?: string;
-  className? : string;
+  className?: string;
   height: string;
 };
 
@@ -22,19 +21,18 @@ export const MegatronBottom: React.FC<MegatronBottomProps> = ({
   descriptionBoldYellow,
   img,
   className,
-  height
+  height,
 }) => {
   return (
     <>
-      <div className="container-megatron" style={{height : height}}>
+      <div className="container-megatron" style={{ height: height }}>
         <h1 className="title-clearsight">{title}</h1>
-      <div className={className}>
-        <p className="description-clearsight">{description}</p>
-        <p className="footer-description-clearsight">
-          <span>{descriptionBold}</span> {descriptionBoldYellow}
-        </p>
-        </div> 
-      
+        <div className={className}>
+          <p className="description-clearsight">{description}</p>
+          <p className="footer-description-clearsight">
+            <span>{descriptionBold}</span> {descriptionBoldYellow}
+          </p>
+        </div>
 
         <div className="container-megatron-image">
           {img && (

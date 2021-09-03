@@ -1,9 +1,8 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 import { Jumbotron } from "../../components";
 import image from "assets/images/platform-img.svg";
 
 import "./PlatformSection.scss";
-import { useTranslation } from "react-i18next";
 
 export const PlatformSection = () => {
   const { t } = useTranslation("home");

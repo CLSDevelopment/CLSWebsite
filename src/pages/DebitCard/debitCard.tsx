@@ -1,10 +1,11 @@
-import megatrgonPhoto from "../../assets/images/debit-card-megatron.svg";
-import iconAtm from "../../assets/icon/atm.svg";
+import { Helmet } from "react-helmet";
+import { useTranslation } from "react-i18next";
+import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
 import { DebitCardCryptocurrencies, MegatronSection } from "sections";
 import { Footer, GetStarted, Newslatter } from "components";
-import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
-import { useTranslation } from "react-i18next";
-import { Helmet } from "react-helmet";
+
+import iconAtm from "../../assets/icon/atm.svg";
+import megatrgonPhoto from "../../assets/images/debit-card-megatron.svg";
 
 export default () => {
   const { t } = useTranslation("debitCard");
