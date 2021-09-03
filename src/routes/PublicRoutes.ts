@@ -4,7 +4,7 @@ import { DebitCard, Home, Platform, Wallet, Information, NotFound } from 'pages'
 export const PublicRoutes = [
   {
     component: Home,
-    path: 'home',
+    path: '/',
   },
   {
     component: Platform,

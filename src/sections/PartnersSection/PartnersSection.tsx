@@ -2,7 +2,7 @@ import React from "react";
 import { SliderComponent } from "../../components";
 import bloomberg from "assets/icon/bloomberg-media4038.jpeg"
 import yahoo from "assets/icon/yahoo.svg"
-import insider from "assets/icon/insider-logo.jpeg"
+import insider from "assets/icon/Insider-Logo.png"
 import as from "assets/icon/as.png"
 import marketWatch from "assets/icon/marketwatch-vector-logo.png"
 import einPress from "assets/icon/einnewsdesk.png"
@@ -34,7 +34,7 @@ export const PartnersSection = () => {
 
     <section className="continaer-partner-section">
              {/* <p className="slider-title">{t("slider-title")}</p> */}
-       <h1 className="slider-desctiprion">As featured on</h1> 
+       <h1 className="slider-desctiprion">{t("marketing-associates-title")}</h1> 
       <SliderComponent data={data}/>
     </section>
   );

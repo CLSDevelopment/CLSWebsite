@@ -44,7 +44,15 @@ export const NavBar = () => {
   ];
 
   const toggleExpand = () => {
+   
+    const menuBarMobile = document.getElementById(
+      "public-contianer"
+    ) as HTMLInputElement;
+
+    menuBarMobile.style.overflow = "hidden"
+
     if (window.innerWidth < 1199) { 
+
       if (!expanded) {
         setExpended(!expanded);
 
@@ -54,7 +62,6 @@ export const NavBar = () => {
         "navbarSupportedContent"
       ) as HTMLInputElement;
       inputTag.style.overflowY = "hidden";
-      inputTag.style.overflowX = "hiidden";
 
       document.body.style.overflowY = "scroll";
 
@@ -140,10 +147,10 @@ export const NavBar = () => {
    
             <ul className="navbar-nav ml-auto">
               <li className={navbarButton.join(" ")} onClick={toggleExpand}>
-                <Link to={"/home"}>
+                <Link to={"/"}>
                   <span
                     className={
-                      window.location.pathname === "/home"
+                      window.location.pathname === "/"
                         ? "active"
                         : "no-active"
                     }

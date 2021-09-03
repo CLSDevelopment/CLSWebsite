@@ -1,7 +1,5 @@
-import React from "react";
 import Slider from "react-slick";
 import { Testimonials } from "../Testimonials/Testimonial";
-
 import imgProfile from "../../assets/images/testimonialImg.svg";
 
 import "./SliderForTestimonials.scss";
@@ -67,7 +65,7 @@ export const SliderForTestimonails = () => {
   return (
     <div className="slider-testimonials">
       <Slider {...settings}>
-        {(testimonialsList || []).map((item,index) => (
+        {(testimonialsList || []).map((item, index) => (
           <Testimonials
             name={item.name}
             profession={item.profession}

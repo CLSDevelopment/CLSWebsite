@@ -12,9 +12,14 @@
   }
   ul {
     display: block !important;
-    overflow-x: hidden !important;
+    overflow: hidden !important;
+    width: 50px !important;
+    margin: 0 auto !important;
   }
 
+  .ReactFlagsSelect-module_selectOptions__3LNBJ {
+    max-height: none !important;
+  }
   span {
     color: grey !important;
   }
@@ -27,26 +32,6 @@
   li:hover {
     background: #3481f3;
     color: yellow !important;
-  }
-
-  ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey; 
-    border-radius: 5px;
-  }
-   
- 
-  ::-webkit-scrollbar-thumb {
-    background: #3481f3; 
-    border-radius: 10px;
-  }
-  
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: #3481f3; 
   }
 
   .ReactFlagsSelect-module_label__27pw9 {

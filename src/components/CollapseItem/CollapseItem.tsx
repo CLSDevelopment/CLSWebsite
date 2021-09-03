@@ -24,10 +24,11 @@ export const CollapseItem: React.FC<CollapseItemType> = ({
     <div className="container--collapse">
       <h1 className="collapse--title" onClick={toggleAccordion}>
         <span className="collapse--number">{number}</span> {title}
-        <Arrow direction={setActive === "active" ? 'up' : 'down'}/>
+        <Arrow direction={setActive === "active" ? "up" : "down"} />
       </h1>
-      <p className={`collapse--description accordion ${setActive}`}>{description}</p>
-
+      <p className={`collapse--description accordion ${setActive}`}>
+        {description}
+      </p>
     </div>
   );
 };

@@ -1,14 +1,10 @@
 @import "~layouts/PublicLayout/Variable.scss";
 
-
 .container--footer {
   background: #051047;
   padding: 10px 10px 20px;
   color: #ffffff;
   position: relative;
-
-  
-
 
   .footer--menu {
     margin-top: 110px;
@@ -122,7 +118,6 @@
 
   .container-social-media {
     display: flex;
-    
 
     .round {
       color: #ff9e4a;
@@ -136,7 +131,6 @@
       align-items: center;
       text-decoration: none;
       margin-right: 9px;
-      
 
       &:hover {
         color: #ffffff;

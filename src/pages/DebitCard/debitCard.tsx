@@ -4,7 +4,6 @@ import { DebitCardCryptocurrencies, MegatronSection } from "sections";
 import { Footer, GetStarted, Newslatter } from "components";
 import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 export default () => {

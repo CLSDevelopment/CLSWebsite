@@ -1,22 +1,19 @@
-import React from "react" 
-
+import React from "react";
 import { Tab, Tabs as TabsComponent, TabList, TabPanel } from "react-tabs";
 
-import "./TabsForJobs.scss"
-
+import "./TabsForJobs.scss";
 
 type TabsForJobsType = {
-    data : any
-}
+  data: any;
+};
 
-export const TabsForJobs: React.FC<TabsForJobsType> = ({data}) => {
-    return (
-        <div className="container-tabs-jobs">
-            <TabsComponent>
+export const TabsForJobs: React.FC<TabsForJobsType> = ({ data }) => {
+  return (
+    <div className="container-tabs-jobs">
+      <TabsComponent>
         <TabList>
           {data.map((item, index) => (
             <Tab key={index}>
-
               <p className="title-tab">{item.heading}</p>
             </Tab>
           ))}
@@ -25,7 +22,6 @@ export const TabsForJobs: React.FC<TabsForJobsType> = ({data}) => {
           <TabPanel key={i}>{body}</TabPanel>
         ))}
       </TabsComponent>
-        </div>
-    )
-
-}
+    </div>
+  );
+};

@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
 import {
@@ -9,10 +8,10 @@ import {
   PlatformSkill,
   TestimonialsSection,
 } from "sections";
+import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
 import { Cards, Footer, Newslatter } from "components";
 
 import megatronPhoto from "../../assets/images/platform-megatron-img.svg";
-import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
 
 export default () => {
   const { t } = useTranslation("platform");

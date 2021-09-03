@@ -7,7 +7,6 @@ import {
   WalletSection,
 } from "sections";
 import megatronImage from "../../assets/images/home-image.svg";
-import Head from "next/head";
 import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet";
