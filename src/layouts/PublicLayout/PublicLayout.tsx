@@ -1,7 +1,7 @@
 import { BackToTop, NavBar } from 'components';
 import 'bootstrap/scss/bootstrap.scss';
 import 'slick-carousel/slick/slick.scss';
-import Head from 'next/head';
+import Helmet from "react-helmet";
 import './PublicLayout.scss';
 
 export const PublicLayout = (props) => {
@@ -9,12 +9,12 @@ export const PublicLayout = (props) => {
 
   return (
     <>
-      <Head>
+      <Helmet>
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-      </Head>
+      </Helmet>
       <div>
         <NavBar />
         {children}
