@@ -13,7 +13,7 @@
       line-height: 35px;
       text-align: left;
       text-align: justify;
-      opacity: 60%;
+      opacity: 0.6;
 
       @include breakpoint(md) {
         font-size: 15px;

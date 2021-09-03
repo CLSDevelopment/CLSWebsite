@@ -1,13 +1,17 @@
 import { Footer, GetStarted, Newslatter } from "components";
 import { PublicLayout } from "layouts/PublicLayout/PublicLayout";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
-import { AccessToCryptoSection, BuyCryptoSection, ExchangeInstantlySection, MegatronSection } from "sections";
-import megatronPhoto from "../../assets/images/wallet-megatron-img.svg"
+import {
+  AccessToCryptoSection,
+  BuyCryptoSection,
+  ExchangeInstantlySection,
+  MegatronSection,
+} from "sections";
+import megatronPhoto from "../../assets/images/wallet-megatron-img.svg";
 
 export default () => {
-
-  const {t} = useTranslation("wallet")
+  const { t } = useTranslation("wallet");
 
   const walletMeagtronColmn = {
     type: "megatron_column",
@@ -25,21 +29,19 @@ export default () => {
   ];
   const secondCard = [
     {
-      title:  t("gs-second-card-title"),
-      description:t("gs-second-card-description")
-        ,
+      title: t("gs-second-card-title"),
+      description: t("gs-second-card-description"),
     },
   ];
   const thirdCard = [
     {
-      title:  t("gs-third-card-title"),
+      title: t("gs-third-card-title"),
       description: t("gs-third-card-description"),
     },
   ];
-  
+
   return (
-    <div className="wallet">
-      <PublicLayout>
+    <PublicLayout>
       <Helmet>
         <title>Wallet</title>
       </Helmet>
@@ -54,7 +56,6 @@ export default () => {
       />
       <Newslatter />
       <Footer />
-      </PublicLayout>
-    </div>
+    </PublicLayout>
   );
 };

@@ -11,6 +11,7 @@
   justify-content: flex-end;
 }
 .container--custom--navbar {
+  position:absolute;
   width: 100%;
   .logo-destop {
     display: none;
@@ -18,21 +19,16 @@
     @include breakpoint(lg) {
       display: block;
     }
-  }
-  .logo-mobile {
-    display: block;
-
-    @include breakpoint(lg) {
-      display: none;
-    }
+  
   }
   .navbar {
     z-index: 50;
     max-width: 1250px;
     margin: 0 auto;
+    background-color: transparent;
 
     @include breakpoint(lg) {
-      background-color: white;
+      background-color: transparent;
     }
 
     .user-profile {
@@ -92,7 +88,7 @@
       text-decoration: none;
       font-weight: 600;
       position: relative;
-      color: #fedc22;
+      // color: #fedc22;
 
       @extend %navigationTitle;
       padding-right: 0.5rem;
@@ -118,13 +114,23 @@
       position: relative;
       color: #fedc22;
 
+      @include breakpoint(lg) {
+        color: white;
+        font-weight: 800;
+      }
+
       &:hover {
         -webkit-text-stroke: 0px black;
       }
     }
 
     .no-active {
-      color:lightgray;
+      opacity: 0.5;
+
+      &:hover {
+        color: #fedc22;
+        opacity: 100;
+      }
     }
 
     .navbar-collapse-custom {
@@ -247,10 +253,13 @@
     cursor: pointer;
   }
  
-  .clearsight-logo {
+  .clearsight-logo {  
     img {
-      max-height: 85px;
+      max-height: 95px;
 
+      @include breakpoint(md) {
+        max-height: 85px;
+      }
       @include breakpoint(xs) {
         max-height: 50px;
       }
@@ -264,7 +273,7 @@
 
   .hamburger-icon .line {
     width: 35px;
-    background: black;
+    background: white;
     margin: 6px 0 0 0;
     height: 2px;
     display: block;

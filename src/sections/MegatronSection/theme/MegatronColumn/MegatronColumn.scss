@@ -2,7 +2,7 @@
 
 .container-megatron-column {
   background: linear-gradient(to top, #3481f3 0%, #091d80 100%);
-  padding: 165px 0 40px;
+  padding: 150px 0 40px;
   
  
   .video{
@@ -106,16 +106,21 @@
         }
       }
       .button-megatron {
+
+        @include breakpoint(md) {
+          display: block;
+          text-align: center;
+        }
         @include breakpoint(sm) {
           margin: 0 auto;
           padding: 25px 0px;
-
+          display: block;
           text-align: center;
         }
 
         @include breakpoint(xs) {
           margin: 0 auto;
-          display: flex;
+          display: block;
         }
         .button-megatron-white {
           width: 100%;
@@ -129,9 +134,14 @@
           font-weight: 700;
           text-transform: uppercase;
 
+          @include breakpoint(md) {
+            margin-bottom: 10px;
+          }
+
           @include breakpoint(sm) {
-            max-width: 165px;
+            max-width: 180px;
             padding: 16px;
+            margin-bottom: 10px;
           }
 
           @include breakpoint(xs) {
@@ -152,7 +162,7 @@
           margin: 0 10px;
 
           @include breakpoint(sm) {
-            max-width: 152px;
+            max-width: 180px;
             padding: 14px;
           }
 
