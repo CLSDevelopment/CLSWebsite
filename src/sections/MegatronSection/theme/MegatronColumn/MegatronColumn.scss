@@ -3,9 +3,8 @@
 .container-megatron-column {
   background: linear-gradient(to top, #3481f3 0%, #091d80 100%);
   padding: 150px 0 40px;
-  
- 
-  .video{
+
+  .video {
     display: block;
     position: fixed;
     z-index: 100;
@@ -15,40 +14,35 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    
-  
+
     background-color: rgba(255, 255, 255, 0.91);
- 
 
     > div {
       margin-top: 30px;
       border-radius: 20px;
-      width:100% !important;
-       height:450px !important;
+      width: 100% !important;
+      height: 450px !important;
 
-      
-
-       @include breakpoint(lg) {
+      @include breakpoint(lg) {
         margin-top: 20px;
-       height: 520px !important;
-       z-index: 100;
-       margin-top: 250px;
-      };
+        height: 520px !important;
+        z-index: 100;
+        margin-top: 250px;
+      }
 
-       @include breakpoint(sm) {
-         margin-top: 20px;
+      @include breakpoint(sm) {
+        margin-top: 20px;
         height: 220px !important;
         z-index: 100;
         margin-top: 150px;
-       };
+      }
 
-       @include breakpoint(xs) {
+      @include breakpoint(xs) {
         margin-top: 20px;
-       height: auto !important;
-       z-index: 100;
-       margin-top: 150px;
-      };
-    
+        height: auto !important;
+        z-index: 100;
+        margin-top: 150px;
+      }
     }
   }
   .megatron {
@@ -83,7 +77,7 @@
         .icon-megatron-left {
           margin-left: 15px;
 
-          @include breakpoint (md) {
+          @include breakpoint(md) {
             width: 160px;
           }
           @include breakpoint(sm) {
@@ -94,7 +88,7 @@
           }
         }
         .icon-megatron-right {
-          @include breakpoint (md) {
+          @include breakpoint(md) {
             width: 160px;
           }
           @include breakpoint(sm) {
@@ -106,7 +100,6 @@
         }
       }
       .button-megatron {
-
         @include breakpoint(md) {
           display: block;
           text-align: center;
@@ -159,7 +152,7 @@
           font-size: 15px;
           font-weight: 700;
           text-transform: uppercase;
-          margin: 0 10px;
+          margin: 0 8px;
 
           @include breakpoint(sm) {
             max-width: 180px;

@@ -7,7 +7,7 @@ type TabsType = {
   data?: any;
 };
 
-export const Tabs: React.FC<TabsType> = ( {data} ) => {
+export const Tabs: React.FC<TabsType> = ({ data }) => {
   return (
     <div className="container-tabs">
       <TabsComponent>

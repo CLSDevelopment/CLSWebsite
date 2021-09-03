@@ -1,4 +1,3 @@
-import React from "react";
 import logo from "../../assets/images/iStock-1008450996.svg";
 import logo1 from "../../assets/images/card-img-2.svg";
 import logo2 from "../../assets/images/iStock-1084096262.svg";
@@ -7,11 +6,9 @@ import "./Cards.scss";
 
 import { useTranslation } from "react-i18next";
 
-
 export const Cards = () => {
+  const { t } = useTranslation("platform");
 
-  const {t} = useTranslation("platform")
-  
   return (
     <div className="row container--card">
       <div className="col-sm-12 col-md-6 col-xl-4 card--content">
@@ -41,7 +38,6 @@ export const Cards = () => {
           <p className="card--text">{t("card-platform-description-third")}</p>
         </div>
       </div>
-      
     </div>
   );
 };

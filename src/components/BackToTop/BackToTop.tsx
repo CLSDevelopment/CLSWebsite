@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { Arrow } from '../Arrow/Arrow';
+import React, { useState, useEffect } from "react";
+import { Arrow } from "../Arrow/Arrow";
 
-import './BackToTop.scss';
+import "./BackToTop.scss";
 
 export const BackToTop = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
-  const backToTopClasses = ['scrollTop', !!scrollPosition && 'scroll-shadow'];
+  const backToTopClasses = ["scrollTop", !!scrollPosition && "scroll-shadow"];
 
   const handleScroll = (event) => {
     if (window.pageYOffset < 400) {
@@ -15,19 +15,19 @@ export const BackToTop = () => {
   };
 
   const scrollTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div className={backToTopClasses.join(' ')} onClick={scrollTop}>
+    <div className={backToTopClasses.join(" ")} onClick={scrollTop}>
       <Arrow direction="up" />
     </div>
   );

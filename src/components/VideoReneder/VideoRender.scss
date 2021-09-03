@@ -1,56 +1,52 @@
 @import "~layouts/PublicLayout/Variable.scss";
 
-
-
 .close-video-button {
-    text-decoration: none !important;
-    display: block;
+  text-decoration: none !important;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: 146px;
+  padding: 14px;
+  background-color: #f99f2a;
+  background-image: linear-gradient(to top, #f04e21 0%, #f8a02c 100%);
+  border: none;
+  border-radius: 5px;
+  color: #ffffff !important;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 20px;
+  cursor: pointer;
+
+  @include breakpoint(sm) {
     margin: 0 auto;
-    text-align: center;
-    width: 100%;
-    max-width: 146px;
-    padding: 14px;
-    background-color: #f99f2a;
-    background-image: linear-gradient(to top, #f04e21 0%, #f8a02c 100%);
-    border: none;
-    border-radius: 5px;
-    color: #ffffff !important;
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
+    max-width: 100px;
+    font-size: 12px;
+    padding: 12px;
     margin-top: 20px;
-    cursor: pointer;
-
-    @include breakpoint(sm) {
-      margin: 0 auto;
-      max-width: 100px;
-      font-size: 12px;
-      padding: 12px;
-      margin-top: 20px;
-    }
-
-      
+  }
 }
 
 .button-megatron-transparent {
-    width: 100%;
-    max-width: 146px;
-    padding: 16px;
-    border: 2px solid #ffffff;
-    background: transparent;
-    border-radius: 5px;
-    color: #ffffff;
-    font-size: 15px;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 0 10px;
+  width: 100%;
+  max-width: 146px;
+  padding: 16px;
+  border: 2px solid #ffffff;
+  background: transparent;
+  border-radius: 5px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 10px;
 
-    @include breakpoint(sm) {
-      max-width: 122px;
-      padding: 14px;
-    }
-
-    @include breakpoint(xs) {
-      max-width: 132px;
-    }
+  @include breakpoint(sm) {
+    max-width: 122px;
+    padding: 14px;
   }
+
+  @include breakpoint(xs) {
+    max-width: 132px;
+  }
+}

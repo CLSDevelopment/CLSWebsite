@@ -1,8 +1,8 @@
 import FooterLogo from "assets/icon/logo-footer.png";
+import { useTranslation } from "react-i18next";
 import { Wave } from "../Wave/Wave";
 
 import "./Footer.scss";
-import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import icon2 from "assets/icon/hr.svg";
 import icon3 from "assets/icon/credit-card-get-started.svg";
 import icon4 from "assets/icon/application-download.svg";
@@ -6,10 +7,9 @@ import iconArrowUp from "assets/icon/arrow-icon.svg";
 import iconArrowDown from "assets/icon/arrow-icon-down.svg";
 import iconLeftDown from "assets/icon/icon-left-down.svg";
 import iconRightDown from "assets/icon/icon-right-down.svg";
+import { Wave } from "../Wave/Wave";
 
 import "./GetStarted.scss";
-import { Wave } from "../Wave/Wave";
-import { useTranslation } from "react-i18next";
 
 type GetStartedProps = {
   firstCard?: any;
@@ -26,8 +26,7 @@ export const GetStarted: React.FC<GetStartedProps> = ({
   icon,
   id,
 }) => {
-
-  const {t} = useTranslation("wallet")
+  const { t } = useTranslation("wallet");
 
   return (
     <>
@@ -36,7 +35,7 @@ export const GetStarted: React.FC<GetStartedProps> = ({
         <div className="gs-section" id="get-started">
           <h1 className="gs-section-title">CLEARSIGHT</h1>
           <p className="gs-section-description">
-           {t("gs-section-description")}
+            {t("gs-section-description")}
           </p>
         </div>
         <div className="row get-started-contianer">

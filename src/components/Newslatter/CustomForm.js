@@ -1,11 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 
-import "./Newslatter.scss"
+import "./Newslatter.scss";
 
 const CustomForm = ({ status, message, onValidated }) => {
   let email;
-  
+
   const submit = () =>
     email &&
     email.value.indexOf("@") > -1 &&
@@ -13,7 +13,7 @@ const CustomForm = ({ status, message, onValidated }) => {
       EMAIL: email.value,
     });
 
-    const {t} = useTranslation("home")
+  const { t } = useTranslation("home");
 
   return (
     <>
@@ -25,7 +25,7 @@ const CustomForm = ({ status, message, onValidated }) => {
           className="input-newslatter"
         />
         <button className="btn-newslatter" onClick={submit}>
-        {t("newslater-btn")}
+          {t("newslater-btn")}
         </button>
       </div>
       <div className="message-handling">

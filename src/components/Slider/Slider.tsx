@@ -9,10 +9,13 @@ type SliderComponentType = {
 };
 
 export const SliderComponent: React.FC<SliderComponentType> = ({ data }) => {
+  
+  const { t } = useTranslation("home");
+
   const settings = {
     dots: true,
     infinite: false,
-    speed: 500,
+    speed: 300,
     slidesToShow: 5,
     slidesToScroll: 1,
     initialSlide: 0,
@@ -35,7 +38,6 @@ export const SliderComponent: React.FC<SliderComponentType> = ({ data }) => {
       },
     ],
   };
-  const {t} = useTranslation("home")
   return (
     <div>
       {data && (
@@ -52,10 +54,15 @@ export const SliderComponent: React.FC<SliderComponentType> = ({ data }) => {
                     />
                   </div>
                   <div className="flip-card-back">
-               
-                <a className="beacme-partner-btn" href={item.href} target="_blank"><button className="button-megatron-orange" >
-                   Open Link
-                </button></a>
+                    <a
+                      className="beacme-partner-btn"
+                      href={item.href}
+                      target="_blank"
+                    >
+                      <button className="button-megatron-orange">
+                        {t("slider-card-btn")}
+                      </button>
+                    </a>
                   </div>
                 </div>
               </div>
