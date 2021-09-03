@@ -125,7 +125,12 @@
     }
 
     .no-active {
-      opacity: 50%;
+      opacity: 0.5;
+
+      &:hover {
+        color: #fedc22;
+        opacity: 100;
+      }
     }
 
     .navbar-collapse-custom {

@@ -3,6 +3,7 @@
 .jumbotrom-component {
   margin: 0 auto !important;
   max-width: 1250px;
+  padding: 10px;
 
 
   @include breakpoint(lg) {
@@ -14,8 +15,14 @@
   .jumbotrom-header {
 
     @include breakpoint(md) {
+      -webkit-order: 1;
       order: 1;
-      margin: 20px auto;
+      margin: 0px auto;
+    }
+    @include breakpoint(sm) {
+      -webkit-order: 1;
+      order: 1;
+      margin: 0px auto;
     }
   
     .jumbotrom-image {
