@@ -63,6 +63,22 @@
       line-height: 50.87px;
     }
   }
+  .title-clearsight-arabic {
+    font-size: 24px;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 1.6px;
+    line-height: 67.87px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+
+    @include breakpoint(md) {
+      font-size: 18px;
+      letter-spacing: 7.6px;
+      line-height: 50.87px;
+    }
+  }
 
   .description-clearsight {
     text-shadow: 0 4px 13px rgba(0, 0, 0, 0.3);

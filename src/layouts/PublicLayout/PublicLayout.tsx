@@ -6,12 +6,23 @@ import "./PublicLayout.scss";
 
 export const PublicLayout = (props) => {
   const { children } = props;
+  const rightToLeft = "rtl";
 
   return (
-    <div id="public-contianer">
-      <NavBar />
-      {children}
-      <BackToTop />
-    </div>
+    <>
+      {localStorage.getItem("language") === "AE" ? (
+        <div id="public-contianer" dir={rightToLeft}>
+          <NavBar />
+          {children}
+          <BackToTop />
+        </div>
+      ) : (
+        <div id="public-contianer">
+          <NavBar />
+          {children}
+          <BackToTop />
+        </div>
+      )}
+    </>
   );
 };

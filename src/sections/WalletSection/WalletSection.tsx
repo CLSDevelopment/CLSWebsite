@@ -6,13 +6,20 @@ import "./WalletSection.scss";
 
 export const WalletSection = () => {
   const { t } = useTranslation("home");
+  const isArabic = localStorage.getItem("language") === "AE";
+  const jumbotromTitleArabic = [
+    "section-title",
+    isArabic && "section-title-arabic",
+  ];
 
   return (
     <>
       <Wave colorFirstWave={"#f5f9ff"} direction={"0"} />
       <div className="wallet-section">
         <Jumbotron img={image}>
-          <h3 className="section-title">{t("wallet-title")}</h3>
+          <h3 className={jumbotromTitleArabic.join(" ")}>
+            {t("wallet-title")}
+          </h3>
           <h1 className="section-description">{t("wallet-description")}</h1>
           <p className="section-text">{t("wallet-text")}</p>
           <a href="/wallet" className="section-btn">

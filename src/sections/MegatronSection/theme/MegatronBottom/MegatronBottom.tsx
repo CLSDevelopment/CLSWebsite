@@ -23,10 +23,17 @@ export const MegatronBottom: React.FC<MegatronBottomProps> = ({
   className,
   height,
 }) => {
+  const isArabic = localStorage.getItem("language") === "AE";
+
+  const titleClassArabic = [
+    "title-clearsight",
+    isArabic && "title-clearsight-arabic",
+  ];
+
   return (
     <>
       <div className="container-megatron" style={{ height: height }}>
-        <h1 className="title-clearsight">{title}</h1>
+        <h1 className={titleClassArabic.join(" ")}>{title}</h1>
         <div className={className}>
           <p className="description-clearsight">{description}</p>
           <p className="footer-description-clearsight">
