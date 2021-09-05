@@ -3,23 +3,20 @@
 .jumbotrom-component {
   margin: 0 auto !important;
   max-width: 1250px;
-  padding: 10px;
 
   @include breakpoint(lg) {
     max-width: 1000px;
     display: block;
     margin: 0 auto !important;
   }
-
+  @include breakpoint(md) {
+    display: flex;
+  }
   .jumbotrom-header {
-    @include breakpoint(md) {
-      -webkit-order: 2;
-      order: 2;
+    @include breakpoint(lg) {
       margin: 0px auto;
     }
     @include breakpoint(sm) {
-      -webkit-order: 2;
-      order: 2;
       margin: 0px auto;
     }
 

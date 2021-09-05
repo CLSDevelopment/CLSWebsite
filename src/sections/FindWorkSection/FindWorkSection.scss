@@ -4,6 +4,10 @@
   .platform-body {
     align-self: center;
 
+    @include breakpoint(md) {
+      order: -1;
+    }
+
     .section-text {
       max-width: 565px;
       color: #0a134f;

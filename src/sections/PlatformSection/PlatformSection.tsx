@@ -14,7 +14,7 @@ export const PlatformSection = () => {
 
   return (
     <section className="platform-section">
-      <Jumbotron img={image}>
+      <Jumbotron img={image} sideComponent={false}>
         <h3 className={jumbotromTitleArabic.join(" ")}>{t("wallet-title")}</h3>
         <h1 className="section-description">{t("platform-description")}</h1>
         <p className="section-text">{t("platform-text")}</p>

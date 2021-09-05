@@ -4,13 +4,20 @@
   background-color: #f5f9ff;
   margin: 0 auto;
 
+  .left-side {
+    order: 1;
+  }
+
   ::before {
     background-color: #cbdefd;
   }
 
   .platform-body {
     align-self: center;
-    order: -1;
+
+    @include breakpoint(lg) {
+      margin: 0 auto;
+    }
 
     .section-text {
       max-width: 538px;
@@ -24,7 +31,7 @@
       text-align: left;
       text-align: justify;
 
-      @include breakpoint(md) {
+      @include breakpoint(lg) {
         font-size: 15px;
         line-height: 25px;
         text-align: center;
@@ -51,7 +58,7 @@
         height: 45px;
       }
 
-      @include breakpoint(md) {
+      @include breakpoint(lg) {
         margin: 0 auto;
       }
     }
@@ -68,18 +75,14 @@
 
       @include breakpoint(sm) {
         font-size: 13px;
-      
-      }
-
-      @include breakpoint(md) {
-        text-align: center;
       }
 
       @include breakpoint(lg) {
+        text-align: center;
         font-size: 13px;
       }
     }
-    .section-title-arabic{
+    .section-title-arabic {
       letter-spacing: 7.2px;
       color: #0a134f;
       font-size: 18px;
@@ -100,9 +103,8 @@
       @include breakpoint(lg) {
         font-size: 13px;
       }
-
     }
-    .section-description{
+    .section-description {
       font-size: 64px;
       font-weight: 700;
       color: #0a134f;
@@ -123,6 +125,7 @@
       @include breakpoint(lg) {
         font-size: 40px;
         line-height: 50px;
+        text-align: center;
       }
     }
   }

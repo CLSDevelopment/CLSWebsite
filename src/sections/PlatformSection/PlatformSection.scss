@@ -5,7 +5,14 @@
 
   .platform-body {
     align-self: center;
-    order: 1;
+
+    @include breakpoint(lg) {
+      margin: 0 auto;
+    }
+    
+    @include breakpoint(md) {
+      order: 1;
+    }
 
     .section-text {
       max-width: 538px;
@@ -19,7 +26,7 @@
       text-align: left;
       text-align: justify;
 
-      @include breakpoint(md) {
+      @include breakpoint(lg) {
         font-size: 15px;
         line-height: 25px;
         text-align: center;
@@ -46,7 +53,7 @@
         height: 40px;
       }
 
-      @include breakpoint(md) {
+      @include breakpoint(lg) {
         margin: 0 auto;
       }
     }
@@ -65,12 +72,9 @@
         font-size: 13px;
       }
 
-      @include breakpoint(md) {
-        text-align: center;
-      }
-
       @include breakpoint(lg) {
         font-size: 13px;
+        text-align: center;
       }
     }
     .section-title-arabic{
@@ -93,6 +97,7 @@
 
       @include breakpoint(lg) {
         font-size: 13px;
+        text-align: center;
       }
 
     }
@@ -118,6 +123,7 @@
       @include breakpoint(lg) {
         font-size: 40px;
         line-height: 50px;
+        text-align: center;
       }
     }
   }

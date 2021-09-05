@@ -2,7 +2,7 @@
 
 .buy-crypto-section {
   background-color: #f5f9ff;
-  
+
   ::before {
     background-color: #cbdefd;
   }
@@ -11,7 +11,7 @@
     align-self: center;
     max-width: 1250px;
     margin: 0 auto;
-
+    
     .section-text {
       max-width: 538px;
       opacity: 0.6;
@@ -97,7 +97,7 @@
 
       @include breakpoint(lg) {
         font-size: 30px;
-        line-height: 50px;
+        line-height: 35px;
       }
     }
   }
