@@ -11,7 +11,10 @@
     align-self: center;
     max-width: 1250px;
     margin: 0 auto;
-    
+
+    @include breakpoint(lg) {
+      order: -1;
+    }
     .section-text {
       max-width: 538px;
       opacity: 0.6;

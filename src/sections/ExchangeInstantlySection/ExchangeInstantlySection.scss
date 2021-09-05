@@ -6,12 +6,20 @@
   padding: 50px 0;
 
   .jumbotrom-component {
+    @include breakpoint(lg) {
+      display: flex;
+    }
     .jumbotrom-header {
       order: 1;
     }
 
     .platform-body {
       align-self: center;
+
+      @include breakpoint(lg) {
+        margin: 0 auto;
+        order: -1;
+      }
 
       .section-title {
         font-size: 22px;
