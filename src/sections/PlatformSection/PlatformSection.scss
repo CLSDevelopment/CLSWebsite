@@ -11,7 +11,8 @@
     }
     
     @include breakpoint(md) {
-      order: 1;
+      order: -1;
+      padding-bottom: 30px;
     }
 
     .section-text {
