@@ -19,7 +19,7 @@ export const Jumbotron: React.FC<JumbtronProps> = ({
     "col-md-12",
     "col-lg-6",
     "jumbotrom-header",
-    sideComponent == true && "left-side",
+    sideComponent === true && "left-side",
   ];
 
   return (

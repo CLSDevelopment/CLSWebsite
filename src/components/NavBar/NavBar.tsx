@@ -1,30 +1,20 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "components/LanguageSwitcher/LanguageSwitcher";
 import closeImg from "../../assets/images/close.svg";
-import logo from "../../assets/images/logo.svg";
 import logoWhite from "../../assets/icon/logo-footer.png";
 
 import "./NavBar.scss";
 
 export const NavBar = () => {
   const { t } = useTranslation("home");
-  const [scrollPosition, setScrollPosition] = useState(0);
   const [expanded, setExpended] = useState(false);
   const [isOpen, setOpen] = useState(false);
 
-  const navbarContainer = [
-    "container--custom--navbar",
-    !!scrollPosition && "style-scroll-shadow",
-  ];
+  const navbarContainer = ["container--custom--navbar"];
 
-  const navbarClasses = [
-    "navbar",
-    // "fixed-top",
-    "navbar-expand-xl",
-    !!scrollPosition && "scroll-shadow",
-  ];
+  const navbarClasses = ["navbar", "navbar-expand-xl"];
 
   const navbarCollapseClasses = [
     "collapse",
@@ -33,26 +23,18 @@ export const NavBar = () => {
     expanded && "show",
   ];
 
-  const navbarButton = [
-    "cliersight-menu-right",
-    !!scrollPosition && "link-color",
-  ];
+  const navbarButton = ["cliersight-menu-right"];
 
-  const navbarBurgerMenu = [
-    "hamburger-icon",
-    !!scrollPosition && "button-hamburge-menu",
-  ];
+  const navbarBurgerMenu = ["hamburger-icon"];
 
   const toggleExpand = () => {
-   
     const menuBarMobile = document.getElementById(
       "public-contianer"
     ) as HTMLInputElement;
 
-    menuBarMobile.style.overflow = "hidden"
+    menuBarMobile.style.overflow = "hidden";
 
-    if (window.innerWidth < 1199) { 
-
+    if (window.innerWidth < 1199) {
       if (!expanded) {
         setExpended(!expanded);
 
@@ -70,39 +52,12 @@ export const NavBar = () => {
     setExpended(false);
   };
 
-  const handleScroll = (event) => {
-    if (window) {
-      setScrollPosition(window.scrollY);
-    }
-  };
-
-
-  useEffect(() => {
-    if (window.scrollY) {
-      const inputTag = document.getElementById(
-        "container_scroll_y"
-      ) as HTMLInputElement;
-      inputTag.style.background = "white";
-  }
-
-    // window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <section className={navbarContainer.join(" ")} id="container_scroll_y">
       <nav className={navbarClasses.join(" ")} id="scroll_y">
         <div className="mr-auto">
           <a href="/" className="navbar-brand clearsight-logo">
-            
-            <img
-              src={!!scrollPosition ? logo : logoWhite}
-              className="logo-mobile"
-              alt="clearsight"
-            />
+            <img src={logoWhite} className="logo-mobile" alt="clearsight" />
           </a>
         </div>
 
@@ -110,7 +65,7 @@ export const NavBar = () => {
           className="navbar-toggler border-0"
           type="button"
           data-toggle="collapse"
-         data-target="#navbarSupportedContent"
+          data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded={expanded}
           aria-label="Toggle navigation"
@@ -137,84 +92,73 @@ export const NavBar = () => {
               />
             )}
           </div>
-          <div className="hamb-menu-logo">
-            <img src={logoWhite} width={"150px"}  alt="clearsight"/>
-            <div className="lng-switcher">
-              <LanguageSwitcher />
-            </div>
-          </div>
 
-   
-            <ul className="navbar-nav ml-auto">
-              <li className={navbarButton.join(" ")} onClick={toggleExpand}>
-                <Link to={"/"}>
-                  <span
-                    className={
-                      window.location.pathname === "/"
-                        ? "active"
-                        : "no-active"
-                    }
-                  >
-                    {t("home")}
-                  </span>
-                </Link>
-              </li>
-              <li className={navbarButton.join(" ")} onClick={toggleExpand}>
-                <Link to="/wallet">
-                  <span
-                    className={
-                      window.location.pathname === "/wallet"
-                        ? "active"
-                        : "no-active"
-                    }
-                  >
-                    {t("wallet")}
-                  </span>
-                </Link>
-              </li>
-              <li className={navbarButton.join(" ")} onClick={toggleExpand}>
-                <Link to="/platform">
-                  <span
-                    className={
-                      window.location.pathname === "/platform"
-                        ? "active"
-                        : "no-active"
-                    }
-                  >
-                    {t("platform")}
-                  </span>
-                </Link>
-              </li>
-              <li className={navbarButton.join(" ")} onClick={toggleExpand}>
-                <Link to="debit-card">
-                  <span
-                    className={
-                      window.location.pathname === "/debit-card"
-                        ? "active"
-                        : "no-active"
-                    }
-                  >
-                    {t("debitcard")}
-                  </span>
-                </Link>
-              </li>
-              <li className={navbarButton.join(" ")} onClick={toggleExpand}>
-                <Link to="/information">
-                  <span
-                    className={
-                      window.location.pathname === "/information"
-                        ? "active"
-                        : "no-active"
-                    }
-                  >
-                    {t("information")}
-                  </span>
-                </Link>
-              </li>
-              <li className="lang-switcher-destop">
-                <LanguageSwitcher />
-              </li>
-            </ul>
+          <ul className="navbar-nav ml-auto">
+            <li className={navbarButton.join(" ")} onClick={toggleExpand}>
+              <Link to={"/"}>
+                <span
+                  className={
+                    window.location.pathname === "/" ? "active" : "no-active"
+                  }
+                >
+                  {t("home")}
+                </span>
+              </Link>
+            </li>
+            <li className={navbarButton.join(" ")} onClick={toggleExpand}>
+              <Link to="/wallet">
+                <span
+                  className={
+                    window.location.pathname === "/wallet"
+                      ? "active"
+                      : "no-active"
+                  }
+                >
+                  {t("wallet")}
+                </span>
+              </Link>
+            </li>
+            <li className={navbarButton.join(" ")} onClick={toggleExpand}>
+              <Link to="/platform">
+                <span
+                  className={
+                    window.location.pathname === "/platform"
+                      ? "active"
+                      : "no-active"
+                  }
+                >
+                  {t("platform")}
+                </span>
+              </Link>
+            </li>
+            <li className={navbarButton.join(" ")} onClick={toggleExpand}>
+              <Link to="debit-card">
+                <span
+                  className={
+                    window.location.pathname === "/debit-card"
+                      ? "active"
+                      : "no-active"
+                  }
+                >
+                  {t("debitcard")}
+                </span>
+              </Link>
+            </li>
+            <li className={navbarButton.join(" ")} onClick={toggleExpand}>
+              <Link to="/information">
+                <span
+                  className={
+                    window.location.pathname === "/information"
+                      ? "active"
+                      : "no-active"
+                  }
+                >
+                  {t("information")}
+                </span>
+              </Link>
+            </li>
+          </ul>
+          <LanguageSwitcher />
           <div className="hamb-socials">
             <div className="container-social-media">
               <a className="fa fa-facebook round" />

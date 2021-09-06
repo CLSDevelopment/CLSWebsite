@@ -16,7 +16,7 @@ const hist = createBrowserHistory();
 const store = configureStore();
 
 ReactDOM.render(
-  <ReduxProvider store={store}>
+  
     <Router history={hist}>
       <link
         rel="stylesheet"
@@ -25,8 +25,8 @@ ReactDOM.render(
       <Switch>
         <RouteSwitcher path="/" />
       </Switch>
-    </Router>
-  </ReduxProvider>,
+    </Router>,
+  
   document.getElementById('root')
 );
 

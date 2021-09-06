@@ -1,20 +1,25 @@
+@import "../../layouts/PublicLayout/Variable.scss";
+
 .select-language-component {
   button {
     cursor: pointer;
     width: 100%;
     display: flex;
-    justify-content: space-evenly !important;
-    align-items: center;
-    padding: 5px 5px !important;
+    justify-content: flex-start;
     background: transparent;
     border: none !important;
     border-radius: 5px;
+    padding-left: 32px;
   }
   ul {
     display: block !important;
     overflow: hidden !important;
     width: 50px !important;
     margin: 0 auto !important;
+
+    @include breakpoint(lg){
+      width: 80% !important; 
+    }
   }
 
   .ReactFlagsSelect-module_selectOptions__3LNBJ {
@@ -36,6 +41,10 @@
 
   .ReactFlagsSelect-module_label__27pw9 {
     display: none !important;
+
+    @include breakpoint(lg){
+      display: block !important;
+    }
   }
   .ReactFlagsSelect-module_selectFlag__2q5gC {
     margin-left: 6px !important;
