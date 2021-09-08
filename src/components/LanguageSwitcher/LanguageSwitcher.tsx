@@ -17,14 +17,14 @@ export const LanguageSwitcher = () => {
     }
     const lang = getLocalLanguage().toLocaleUpperCase();
     if (lang) {
-      i18n.changeLanguage(lang);
+      i18n.changeLanguage(lang.toLowerCase());
       setSelected(lang);
     }
   }, [i18n]);
 
   const changeLanguage = (selected) => {
     setSelected(selected);
-    i18n.changeLanguage(selected);
+    i18n.changeLanguage(selected.toLowerCase());
     saveLocalLanguage(selected);
   };
 
