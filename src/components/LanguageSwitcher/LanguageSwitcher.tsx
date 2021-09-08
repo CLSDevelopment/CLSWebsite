@@ -30,7 +30,7 @@ export const LanguageSwitcher = () => {
   return (
     <div className="select-language-component">
       <ReactFlagsSelect
-        countries={["GB", "DE", "IT", "RU", "FR", "ES", "CN", "AE"]}
+        countries={["GB", "DE", "IT", "RU", "FR", "ES"]}
         customLabels={{
           GB: "EN",
           FR: "FR",
