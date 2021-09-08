@@ -23,7 +23,7 @@ export const NavBar = () => {
     expanded && "show",
   ];
 
-  const navbarButton = ["cliersight-menu-right"];
+  const navbarButton = ["clearsight-menu-right"];
 
   const navbarBurgerMenu = ["hamburger-icon"];
 
@@ -34,7 +34,7 @@ export const NavBar = () => {
 
     menuBarMobile.style.overflow = "hidden";
 
-    if (window.innerWidth < 1199) {
+    if (window.innerWidth <= 1199) {
       if (!expanded) {
         setExpended(!expanded);
 
@@ -159,13 +159,6 @@ export const NavBar = () => {
             </li>
           </ul>
           <LanguageSwitcher />
-          <div className="hamb-socials">
-            <div className="container-social-media">
-              <a className="fa fa-facebook round" />
-              <a className="fa fa-twitter round" />
-              <a className="fa fa-telegram round"></a>
-            </div>
-          </div>
           {isOpen && (
             <div className="nav-overlay" onClick={() => setOpen(false)} />
           )}

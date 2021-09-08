@@ -1,6 +1,10 @@
-@import "../../layouts/PublicLayout/Variable.scss";
+@import '../../layouts/PublicLayout/Variable.scss';
 
 .select-language-component {
+  @include breakpoint(lg) {
+    border: 1px solid;
+  }
+
   button {
     cursor: pointer;
     width: 100%;
@@ -9,21 +13,32 @@
     background: transparent;
     border: none !important;
     border-radius: 5px;
-    padding-left: 32px;
+    padding-left: 17px;
   }
   ul {
     display: block !important;
     overflow: hidden !important;
-    width: 50px !important;
-    margin: 0 auto !important;
-
-    @include breakpoint(lg){
-      width: 80% !important; 
-    }
+    margin: 6px auto !important;
   }
 
   .ReactFlagsSelect-module_selectOptions__3LNBJ {
     max-height: none !important;
+    width: 171px;
+    left: -70px;
+    background: #0d2850;
+    border: none;
+    color: white;
+
+    @include breakpoint(lg) {
+      width: 100%;
+      background: #212529b3;
+      border: none;
+      left: 0;
+    }
+
+    li {
+      padding-left: 25px !important;
+    }
   }
   span {
     color: grey !important;
@@ -40,9 +55,7 @@
   }
 
   .ReactFlagsSelect-module_label__27pw9 {
-    display: none !important;
-
-    @include breakpoint(lg){
+    @include breakpoint(lg) {
       display: block !important;
     }
   }
