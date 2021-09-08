@@ -1,13 +1,7 @@
-@import "./layouts/PublicLayout/PublicLayout.scss";
-@import "./layouts/PublicLayout/Variable.scss";
-
+@import './layouts/PublicLayout/PublicLayout.scss';
+@import './layouts/PublicLayout/Variable.scss';
 
 body {
   margin: 0;
   padding: 0;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

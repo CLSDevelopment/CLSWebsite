@@ -12,9 +12,10 @@ export const LanguageSwitcher = () => {
 
   useEffect(() => {
     if (localStorage.getItem("language") === null) {
+      console.log(selected);
       saveLocalLanguage(selected);
     }
-    const lang = getLocalLanguage();
+    const lang = getLocalLanguage().toLocaleUpperCase();
     if (lang) {
       i18n.changeLanguage(lang);
       setSelected(lang);

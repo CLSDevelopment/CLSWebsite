@@ -1,0 +1,31 @@
+{
+    "information-description":"Die Zukunft der Freelancer und",
+    "information-descriptionBoldYellow":"Arbeitssuchenden",
+    "info-content-description" : "Über uns",
+    "info-content-text-about-us" : "ClearSight ist eine globale Plattform für Freelancer, die mithilfe dezentraler Technologien wie Blockchain und Smart Cards zuverlässige Solutions für Freelancer bietet. Diese interaktive Plattform hilft Arbeitgebern, die richtigen Freelancer zu finden und umgekehrt. Wir haben unser System mit einem BSC-basierten Token gesichert, um eine erstklassige Benutzererfahrung unter den Mitgliedern zu gewährleisten. ClearSight weiß, dass Freelancer von anderen Freelancer-Websites mit hohen Provisionsgebühren gequält werden, und setzt sich dafür ein, diese Gebühren mithilfe der Blockchain-Technologie zu senken. Darüber hinaus ermöglicht unsere benutzerfreundliche Plattform den einfachen Zugriff auf Ihr Geld mit einer Visa-Debitkarte. ClearSight bietet Freelancern die Möglichkeit, ihre Berufsprofile mithilfe einer Digital Identity zu verwalten, die sie vor Diebstahl und Betrug schützt. Mit über 21 Milliarden tauschbaren Token bietet ClearSight relativ niedrige Transaktionskosten bei gleichzeitig superschnellen Transaktionen.",
+    
+    "solution-freelancer" : "Solutions für Freelancer",
+    "solution-text-freelancer-first" : "Wir speichern Ihre Benutzerdaten, z. B. Zertifikate, Ruf und Bewertungen, in einer BSC-basierten Blockchain und ermöglichen es den Benutzern, Eigentümer ihrer Profildaten zu sein.",
+    "solution-text-freelancer-second" : "Wir bieten einen BSC-Protokoll-basierten Transaktionsalgorithmus für Freelancer. ClearSight legt alle Ihre Kreationen in unserem Token ab und bietet eine automatische Treuhandzahlung, die Kunden exklusive Ansprüche auf bestimmte Lieferungen gewährt.",
+    "solution-text-freelancer-third" : "Wir minimieren die Abhängigkeit von Bankkarten, indem wir Smart Contracts als Treuhandkonto für die Zahlung verwenden. Dies reduziert auch die Transaktionskosten unter Freelancern.",
+    "solution-text-freelancer-fourth" : "Wir bieten eine Debitkarten-basierte Wallet zur Zahlung an, um das Vertrauen zu stärken. Die Zahlungen erfolgen automatisch nach der Lieferung. ",
+    "solution-text-freelancer-five" : "Wir verifizieren und identifizieren jedes Profil mit unserer Blockchain-Technologie, um Diebstahl und Betrug zu verhindern. Wir setzen intensiv auf KYC- und AML-Techniken und bieten hervorragende Scans sowohl für Freelancer als auch für Arbeitgeber.",
+    
+    "solution-employer" : "Lösungen für Arbeitgeber",
+    "solution-text-employer-first" : "Sie werden direkt mit den besten Arbeitskräften interagieren, ohne den Umweg über einen Mittelsmann.",
+    "solution-text-employer-second" : "Wir helfen Ihnen bei der Überprüfung der Identität (ID) und des Leistungsnachweises von Freelancern.",
+    "solution-text-employer-third" : "Wir bieten DAPPS an, die es Freelancern ermöglichen, Nachweise über ihre Leistungen und Bewertungen von früheren Arbeitgebern zu veröffentlichen, um das Vertrauen zu stärken. ",
+    "solution-text-employer-fourth" : "Wir bieten Tools, die die Integration und Dezentralisierung von Arbeitskräften mithilfe von Blockchain-Techniken unterstützen. ",
+    "solution-text-employer-five" : "Wir ermöglichen es Ihnen, die Qualität der Lieferung zu überprüfen, bevor Sie mit der Zahlung fortfahren.",
+    "solution-text-employer-six" : "Wir gewährleisten die vollständige KYC/AML-Durchsetzung für alle unsere Mitglieder, egal ob Freelancer oder Arbeitgeber. ",
+
+    "question-description": "OFT GESTELLTE FRAGE",
+    "first-q-title": "Wie können Sie mir versichern, dass dies tatsächlich ohne hohe Gebühren und schnelle Transaktionen funktionieren wird?",
+    "first-q-description": "Dank der Binance Smart Chain waren wir in der Lage, dies in kürzester Zeit zu erreichen. Unser primärer Token (Clearsight CLS) ist ein BSC-basierter Token mit unbegrenzter Power.",
+    "second-q-title": "Wie viele CLS-Token gibt es, und was sind die Vorteile davon?",
+    "second-q-description": "Zurzeit gibt es 21 Milliarden Token, die zum Launch erstellt wurden. Diese Zahl ist jedoch unbegrenzt und ändert sich mit jedem Job: Der Arbeitgeber prägt Token, wenn er kauft, der fertige Job verbrennt die Token.In der Zwischenzeit behalten die Investoren unserer Plattform, die die Token halten, 1% jeder Transaktionsgebühr, ohne dass der Arbeitgeber oder der Freiberufler irgendetwas an die Plattform zahlen muss, so verdienen wir unser Geld, indem wir den anderen nicht wehtun.",
+    "third-q-title": "Wann werden Sie die Plattform launchen?",
+    "third-q-description": "Die erste Demo der Plattform wird auf der Crypto Expo Dubai 2021 präsentiert werden, danach werden wir uns voll einsetzen, um die erste Version im 1. Quartal 2022 live zu haben, der Token Presale soll im 4. Quartal 2021 und 1. Quartal 2022 gestartet werden. Wir haben diesen limitiert, damit die Investoren gute Anteile behalten und gut verdienen, gleichzeitig haben wir genug Investitionsgelder, um diese Plattform aufzubauen und unsere Konkurrenz zu schlagen.",
+    "fourth-q-title": "Wie viele Menschen arbeiten für Clearsight?",
+    "fourth-q-description": "Diese Frage ist schwer zu beantworten, wir haben 3 Gründer, die die Väter dieser Plattform sind, aber Clearsight wird vollständig von Freelancern auf der ganzen Welt aufgebaut, alles was Sie auf Clearsight sehen und nutzen wird von einem Freelancer aufgebaut, wir verpflichten uns, das gesamte Projekt von Freelancern aufbauen zu lassen. Wenn Sie ein Freelancer sind und an Clearsight arbeiten wollen, kontaktieren Sie uns auf info@clearsight.finance."
+}

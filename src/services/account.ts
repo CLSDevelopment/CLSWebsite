@@ -8,7 +8,7 @@ export const getLocalAccount = () => {
 };
 
 export const saveLocalLanguage = (language) => {
-  localStorage.setItem("language", language);
+  localStorage.setItem("language", language.toLowerCase());
 };
 
 export const getLocalLanguage = () => {

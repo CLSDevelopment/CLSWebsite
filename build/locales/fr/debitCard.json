@@ -1,0 +1,20 @@
+{
+    "debit-card-title": "Bienvenue chez clearsight",
+    "debit-card-descriptionOptional": " Carte de débit",
+    "debit-card-textArea" : "Nous fournissons notre propre carte de débit à nos utilisateurs, afin de leur permettre de retirer aussi facilement que possible leur argent durement gagné.",
+    "debit-card-btn": "En savoir plus",
+
+    "debit-card-crypto-description": "VOUS MÉRITEZ D'ACCÉDER FACILEMENT À VOTRE ARGENT",
+    "debit-card-title-one":"Carte de débit VISA",
+    "debit-card-title-second":"Acceptée dans plus de 180 pays",
+    "debit-card-title-third":"Limitations équitables",
+    "debit-card-title-fourth":"Frais très bas",
+    "debit-card-crypto-btn": "ENCORE PLUS",
+
+    "gs-card-title-one": "Téléchargez notre portefeuille mobile",
+    "gs-card-description-one": "Disponible pour iOS et Android",
+    "gs-card-title-two": "Commandez votre carte de débit et payez les frais d'expédition",
+    "gs-card-description-two": "Nous vous la livrerons à votre domicile sous 10 à 15 jours.",
+    "gs-card-title-third": "Activez-la au distributeur automatique le plus proche",
+    "gs-card-description-third": "Pour l'activer, il suffit de mettre la carte dans le distributeur et de vérifier votre solde."
+}

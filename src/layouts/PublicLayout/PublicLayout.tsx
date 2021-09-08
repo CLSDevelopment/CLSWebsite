@@ -1,16 +1,33 @@
-import "bootstrap/scss/bootstrap.scss";
-import "slick-carousel/slick/slick.scss";
-import { BackToTop, NavBar } from "components";
+import { Helmet } from 'react-helmet';
+import 'bootstrap/scss/bootstrap.scss';
+import 'slick-carousel/slick/slick.scss';
+import { BackToTop, NavBar } from 'components';
 
-import "./PublicLayout.scss";
+import './PublicLayout.scss';
 
-export const PublicLayout = (props) => {
+export const PublicLayout = props => {
   const { children } = props;
-  const rightToLeft = "rtl";
+  const rightToLeft = 'rtl';
 
   return (
     <>
-      {localStorage.getItem("language") === "AE" ? (
+      <Helmet>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-SC3JZRM40X');
+              `,
+          }}
+        />
+      </Helmet>
+      {localStorage.getItem('language') === 'AE' ? (
         <div id="public-contianer" dir={rightToLeft}>
           <NavBar />
           {children}
