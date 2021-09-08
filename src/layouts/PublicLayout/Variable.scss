@@ -53,62 +53,8 @@ $sideNavigationWidth: 260px;
   }
 }
 
-// %titleSectionPresent {
-//   color: $textColorTitle;
-//   font-size: 51px;
-//   font-weight: 700;
-//   line-height: 66px;
-
-//   @include breakpoint(sm) {
-//     font-size: 38px;
-//     line-height: 50px;
-//   }
-// }
-
-// %descriptionSectionPresent {
-//   color: $textColorTitle;
-//   font-size: 24px;
-//   font-weight: 400;
-//   letter-spacing: -0.42px;
-//   line-height: 40px;
-
-//   @include breakpoint(sm) {
-//     font-size: 18px;
-//     line-height: 35px;
-//   }
-// }
-
-// %titleSectionSmall {
-//   font-size: 32px;
-//   font-weight: 700;
-//   line-height: 64px;
-//   color: $textColorTitle;
-// }
-
-// %descriptionSection {
-//   font-size: 22px;
-//   color: $buttonBackgroundColor;
-//   letter-spacing: -0.38px;
-//   line-height: 40px;
-
-//   @include breakpoint(sm) {
-//     font-size: 16px;
-//     line-height: 30px;
-//   }
-// }
-
-// %buttonSection {
-//   color: $buttonTextColor;
-//   background: $buttonBackgroundColor;
-//   font-size: 13px;
-//   font-weight: 500;
-//   line-height: 17px;
-//   text-decoration: none;
-// }
-
 %section-button {
   background-color: #ffffff;
-
   border: none;
   border-radius: 8px;
   color: white;
