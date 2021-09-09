@@ -1,5 +1,6 @@
 import React from "react";
 import { Wave } from "../../../../components";
+import LightSpeed from 'react-reveal/LightSpeed';
 
 import "./MegatronBottom.scss";
 
@@ -43,7 +44,9 @@ export const MegatronBottom: React.FC<MegatronBottomProps> = ({
 
         <div className="container-megatron-image">
           {img && (
+         <LightSpeed right>
             <img src={img} className="megatron-image" alt="megatrgon-image" />
+            </LightSpeed>
           )}
         </div>
       </div>

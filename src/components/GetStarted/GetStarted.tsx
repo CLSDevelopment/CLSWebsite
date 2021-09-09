@@ -8,6 +8,8 @@ import iconArrowDown from "assets/icon/arrow-icon-down.svg";
 import iconLeftDown from "assets/icon/icon-left-down.svg";
 import iconRightDown from "assets/icon/icon-right-down.svg";
 import { Wave } from "../Wave/Wave";
+import Spin from 'react-reveal/Spin';
+
 
 import "./GetStarted.scss";
 
@@ -52,7 +54,9 @@ export const GetStarted: React.FC<GetStartedProps> = ({
               </div>
             ))}
           </div>
-
+          <Spin>
+         
+        
           <div className="col-xl-1 first-arrow ">
             <img src={iconArrowUp} alt="icon-arrow" className="arrow-up" />
             <img
@@ -61,7 +65,7 @@ export const GetStarted: React.FC<GetStartedProps> = ({
               className="arrow-right"
             />
           </div>
-
+          </Spin>
           <div className="col-sm-12 col-md-6 col-xl-3 card-gs">
             <div className="card-gs-header">
               <img src={icon3} className="icon" alt="second-icon" />
@@ -75,11 +79,12 @@ export const GetStarted: React.FC<GetStartedProps> = ({
               </div>
             ))}
           </div>
-
+          <Spin>
           <div className="col-xl-1 second-arrow">
             <img src={iconArrowDown} alt="" className="arrow-down" />
             <img src={iconLeftDown} alt="" className="arrow-left" />
           </div>
+          </Spin>
 
           <div className="col-sm-12 col-md-6 col-xl-3 card-gs">
             <div className="card-gs-header">

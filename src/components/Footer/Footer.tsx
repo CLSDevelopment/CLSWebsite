@@ -55,7 +55,7 @@ export const Footer = () => {
               <li>
                 <i className="fa fa-file-text-o" aria-hidden="true"></i>
                 <a
-                  href="https://drive.google.com/file/d/1IA27S3gRBxBktVMCak-AApbhMGiAJm2s/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1QTG5KzLXrrktVz77Yuv1AlH7t5FAg30N/view"
                   target="_blank"
                   rel="noreferrer"
                 >

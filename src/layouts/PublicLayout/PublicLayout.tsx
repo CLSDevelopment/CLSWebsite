@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet";
 import "bootstrap/scss/bootstrap.scss";
 import "slick-carousel/slick/slick.scss";
+
 import { BackToTop, NavBar } from "components";
 
 import "./PublicLayout.scss";
