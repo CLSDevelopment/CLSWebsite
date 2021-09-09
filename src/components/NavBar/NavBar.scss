@@ -283,3 +283,17 @@
     width: 26px;
   }
 }
+
+
+#navbarSupportedContent {
+  // position: relative;
+  animation: myfirst 1s;
+  animation-direction: alternate;
+}
+@keyframes myfirst {
+  0%   { right: -1130px; top: -1250px;}
+  25% {right: 0px; top: 0px}
+ 
+}
+
+

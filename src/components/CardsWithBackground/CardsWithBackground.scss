@@ -4,6 +4,13 @@
   max-width: 1250px;
   margin: 0 auto !important;
 
+  .my-anchor-css-class {
+    text-decoration: none;
+    color: #14379e;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
   .card--container {
     margin-bottom: 20px;
     position: relative;

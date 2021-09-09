@@ -47,11 +47,13 @@ export const SliderComponent: React.FC<SliderComponentType> = ({ data }) => {
               <div className="flip-card" key={index}>
                 <div className="flip-card-inner">
                   <div className="flip-card-front">
+                    {item.href && <a className="img-href" href={item.href}>
                     <img
                       className="slider-img"
                       src={item.img}
                       alt="partner-img"
                     />
+                    </a>}
                   </div>
                   <div className="flip-card-back">
                     <a

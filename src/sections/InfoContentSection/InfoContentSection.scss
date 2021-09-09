@@ -37,7 +37,7 @@
     font-weight: 400;
     line-height: 35px;
     padding: 40px 0;
-    text-align: center;
+    text-align: justify;
     width: 100%;
     max-width: 1200px;
     display: block;
@@ -45,6 +45,7 @@
 
     @include breakpoint(md) {
       font-size: 14px;
+      padding: 20px;
     }
   }
   .solutions {
