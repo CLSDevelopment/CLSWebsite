@@ -1,0 +1,85 @@
+Description: Regional Web Access Firewall (WAF). Prevents SQL injection limit.
+Parameters:
+  Environment:
+    Description: "Name of the current environment"
+    Type: "String"
+    AllowedValues:
+      - prod
+      - staging
+      - dev
+Resources:
+  RegionalWebAccessFirewall:
+    Type: AWS::WAFRegional::WebACL
+    Properties: 
+      DefaultAction:
+        Type: BLOCK
+      MetricName: RegionalWebAccessFirewall
+      Name: RegionalWebAccessFirewall
+      Rules:
+        - Action:
+            Type: ALLOW
+          Priority: 2
+          RuleId: !Ref AllowedIPsRule  
+        - Action: 
+            Type: BLOCK
+          Priority: 1
+          RuleId: !Ref SqlInjectionRule
+
+  AllowedIPsRule:
+    Type: AWS::WAFRegional::Rule
+    Properties: 
+      MetricName: AllowedIPsRule
+      Name: AllowedIPsRule
+      Predicates: 
+        - DataId: !Ref WhiteListIpSet
+          Negated: false
+          Type: IPMatch
+
+  WhiteListIpSet:
+    Type: AWS::WAFRegional::IPSet
+    Properties: 
+      Name: IPSetWhitelistedIPs
+      IPSetDescriptors: 
+        - Type: "IPV4"
+          Value: 172.31.0.0/16
+
+  SqlInjectionRule:
+    Type: AWS::WAFRegional::Rule
+    Properties: 
+      Name: SqlInjectionRule
+      MetricName: SqlInjectionRule
+      Predicates: 
+        - DataId: !Ref SqlInjectionMatchSet
+          Negated: false
+          Type: SqlInjectionMatch
+
+  SqlInjectionMatchSet: 
+    Type: AWS::WAFRegional::SqlInjectionMatchSet
+    Properties: 
+      Name: SqlInjectionMatchSet
+      SqlInjectionMatchTuples: 
+        - FieldToMatch: 
+            Type: QUERY_STRING
+          TextTransformation: URL_DECODE
+        - FieldToMatch:
+            Type: QUERY_STRING
+          TextTransformation: HTML_ENTITY_DECODE
+        - FieldToMatch:
+            Type: BODY
+          TextTransformation: URL_DECODE
+        - FieldToMatch:
+            Type: BODY
+          TextTransformation: HTML_ENTITY_DECODE
+        - FieldToMatch:
+            Type: URI
+          TextTransformation: URL_DECODE
+        - FieldToMatch:
+            Type: URI
+          TextTransformation: HTML_ENTITY_DECODE
+
+Outputs:
+  RegionalWebAccessFirewall:
+    Description: Api Gateway Regional WebAccess Firewall
+    Value: !Ref RegionalWebAccessFirewall
+    Export:
+      Name: !Join [ "-", [ "finance-waf", !Ref Environment ] ]

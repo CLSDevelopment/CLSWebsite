@@ -1,0 +1,130 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: >-
+  AWS CloudFormation templates for static hosting resources
+
+Parameters:
+  VPC:
+    Description: Select VPC.
+    Type: String
+    Default: 'vpc-0301b5da209560e04'
+  CertificateARN:
+    Type: String
+    Description: 'The ARN of the AWS managed certificate. NOTE: Certificate must be a ACM in us-east-1.'
+    AllowedValues: 
+      - arn:aws:acm:us-east-1:996819435370:certificate/1fedc696-6c03-42e0-8ce5-25cda6b4876b
+      - arn:aws:acm:us-east-1:996819435370:certificate/7719cc99-e95e-4477-87d6-82538f5f87b1
+      - arn:aws:acm:us-east-1:996819435370:certificate/d1272a80-f77a-445a-9a20-58db0be4f64c
+  BucketName:
+    Description: Name of the S3 bucket for static website hosting.
+    Type: "String"
+    MinLength: 1
+    MaxLength: 255
+    AllowedValues:
+      - staging.clearsight.finance
+      - clearsight.finance
+      - dev.clearsight.finance
+  Environment:
+    Description: "Name of the current environment"
+    Type: "String"
+    AllowedValues:
+      - prod
+      - staging
+      - dev
+
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref BucketName
+      BucketEncryption: 
+        ServerSideEncryptionConfiguration: 
+          - ServerSideEncryptionByDefault: 
+              SSEAlgorithm: AES256
+
+  BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket:
+        Ref: S3Bucket
+      PolicyDocument:
+        Id: Read access to world. Serverside encryption.
+        Statement:
+        - Sid: CloudFrontAllow
+          Effect: Allow
+          Principal: 
+            AWS: !Join [ "", [ "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity ", !Ref CloudFrontOriginAccessIdentity ] ]
+          Action: 
+            - 's3:GetObject'
+            - 's3:PutObject'
+          Resource: !Join [ "", [ 'arn:aws:s3:::', Ref: BucketName, "/*"] ]
+          Condition:
+            IpAddress:
+              aws:SourceIp: 
+              - 10.0.0.0/16
+ 
+  CloudFrontOriginAccessIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig: 
+        Comment: !Join ["", ["Origin Access identity for ", Ref: BucketName, "."]]
+
+  CloudFrontDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Origins:
+        - DomainName: !Join [ "", [ Ref: BucketName, ".s3.amazonaws.com" ] ] 
+          Id: !Join [ "", [ Ref: BucketName, ".s3.amazonaws.com" ] ] 
+          S3OriginConfig: 
+            OriginAccessIdentity: !Join ["", ["origin-access-identity/cloudfront/", !Ref CloudFrontOriginAccessIdentity]]
+        Enabled: 'true'
+        Aliases: 
+          - !Ref BucketName
+        Comment: !Join [ ": ", [ "CloudFront distribution for", Ref: BucketName ] ] 
+        DefaultRootObject: index.html
+        DefaultCacheBehavior:
+          AllowedMethods:
+          - DELETE
+          - GET
+          - HEAD
+          - OPTIONS
+          - PATCH
+          - POST
+          - PUT
+          TargetOriginId: !Join [ "", [ Ref: BucketName, ".s3.amazonaws.com" ] ]
+          ForwardedValues:
+            QueryString: 'false'
+            Cookies:
+              Forward: none
+          Compress: 'true'
+          DefaultTTL: '1800'
+          MinTTL: '0'
+          MaxTTL: '86400'
+          ViewerProtocolPolicy: redirect-to-https
+        HttpVersion: http2
+        ViewerCertificate:
+          AcmCertificateArn: !Ref CertificateARN
+          SslSupportMethod: sni-only
+          MinimumProtocolVersion: TLSv1.2_2018
+        Logging:
+          Bucket: !GetAtt CloudFrontDistributionAccessLogsS3Bucket.DomainName
+          Prefix: !Join [ "-", [ "cls-logging", !Ref Environment ] ]
+        # WebACLId: !ImportValue waf
+        CustomErrorResponses:
+          - ErrorCode: '403'
+            ResponsePagePath: /index.html
+            ResponseCode: '200'
+            ErrorCachingMinTTL: '0'
+          - ErrorCode: '404'
+            ResponsePagePath: /index.html
+            ResponseCode: '200'
+            ErrorCachingMinTTL: '0'
+
+  CloudFrontDistributionAccessLogsS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Join [ ".", [ "cloudfront", "logs", Ref: BucketName ] ]
+      BucketEncryption: 
+        ServerSideEncryptionConfiguration: 
+          - ServerSideEncryptionByDefault: 
+              SSEAlgorithm: AES256
