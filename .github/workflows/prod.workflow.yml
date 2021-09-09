@@ -1,0 +1,93 @@
+name: Deploy Production
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  deploy-infra-prod:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Configure AWS credentials
+        id: creds
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: "eu-central-1"
+
+      - name: Deploy Waf
+        id: waf
+        uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
+        with:
+          name: finance-waf-prod
+          template: templates/waf.yml
+          no-fail-on-empty-changeset: "1"
+          parameter-overrides: >-
+            Environment=prod
+
+      - name: Deploy Frontent Infra
+        id: frontend-infra
+        uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
+        with:
+          name: finance-frontend-infra-prod
+          template: templates/frontend-infra.yml
+          no-fail-on-empty-changeset: "1"
+          parameter-overrides: >-
+            Environment=prod
+            CertificateARN="arn:aws:acm:us-east-1:996819435370:certificate/d1272a80-f77a-445a-9a20-58db0be4f64c"
+            BucketName="clearsight.finance"
+      
+      - name: Deploy Backend Infra
+        id: backend-infra
+        uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
+        with:
+          name: finance-backend-infra-prod
+          template: templates/backend-infra.yml
+          no-fail-on-empty-changeset: "1"
+          parameter-overrides: >-
+            Environment=prod
+          
+
+  build-prod:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Install Dependencies
+      run: |
+        npm install
+    - name: Build Application
+      run: |
+        npm run build
+
+    - name: Upload App to S3 Bucket
+      uses: jakejarvis/s3-sync-action@master
+      with:
+        args: --acl public-read --delete
+      env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_PRODUCTION_BUCKET_NAME }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: "eu-central-1"
+        SOURCE_DIR: "build"
+        
+    - name: Create CloudFront Cache Invalidation
+      uses: chetan/invalidate-cloudfront-action@master
+      env:
+        DISTRIBUTION: "E3GFO9YVLBILMG"
+        PATHS: "/*"
+        AWS_REGION: "eu-central-1"
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
