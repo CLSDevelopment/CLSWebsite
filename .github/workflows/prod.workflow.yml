@@ -42,8 +42,8 @@ jobs:
           no-fail-on-empty-changeset: "1"
           parameter-overrides: >-
             Environment=prod,
-            CertificateARN="arn:aws:acm:us-east-1:996819435370:certificate/d1272a80-f77a-445a-9a20-58db0be4f64c",
-            BucketName="clearsight.finance"
+            CertificateARN=arn:aws:acm:us-east-1:996819435370:certificate/d1272a80-f77a-445a-9a20-58db0be4f64c,
+            BucketName=clearsight.finance
       
       - name: Deploy Backend Infra
         id: backend-infra
