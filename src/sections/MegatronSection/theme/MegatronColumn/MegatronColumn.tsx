@@ -1,8 +1,11 @@
-import { VideoRender } from "components/VideoReneder/VideoRender";
-import React, { useState } from "react";
-import { Wave } from "../../../../components";
+import { VideoRender } from 'components/VideoReneder/VideoRender';
+import React, { useState } from 'react';
+import Pulse from 'react-reveal/Pulse';
+import Flip from 'react-reveal/Flip';
 
-import "./MegatronColumn.scss";
+import { Wave } from '../../../../components';
+
+import './MegatronColumn.scss';
 
 type MegatronColumnProps = {
   title?: string;
@@ -33,7 +36,7 @@ export const MegatronColumn: React.FC<MegatronColumnProps> = ({
   buttonArea,
   iconArea,
 }) => {
-  const containerImage = ["col-md-6 ", "megatron-right", sideImage];
+  const containerImage = ['col-md-6 ', 'megatron-right', sideImage];
 
   const [showCard, getShowCard] = useState(false);
 
@@ -41,10 +44,10 @@ export const MegatronColumn: React.FC<MegatronColumnProps> = ({
     if (showCard) {
       getShowCard(false);
 
-      return (document.body.style.overflowY = "scroll");
+      return (document.body.style.overflowY = 'scroll');
     }
     getShowCard(true);
-    document.body.style.overflowY = "hidden";
+    document.body.style.overflowY = 'hidden';
   };
 
   return (
@@ -53,78 +56,85 @@ export const MegatronColumn: React.FC<MegatronColumnProps> = ({
         <div className="row megatron">
           {showCard && (
             <div className="col-md-12 video">
-              <VideoRender url={"https://vimeo.com/580736723"} close={openMe} />
+              <VideoRender url={'https://vimeo.com/580736723'} close={openMe} />
             </div>
           )}
+          <Flip top>
+            <div className="col-md-6 megatron-left">
+              {title && <h1 className="title-clearsight-column">{title}</h1>}
 
-          <div className="col-md-6 megatron-left">
-            {title && <h1 className="title-clearsight-column">{title}</h1>}
-            {description && (
-              <p className="description-clearsight-column">
-                {description}
-                <span className="footer-description-clearsight">
-                  {descriptionOptional}
-                </span>
-              </p>
-            )}
-            <p className="text-area-megatron">{textArea}</p>
+              {description && (
+                <p className="description-clearsight-column">
+                  {description}
+                  <span className="footer-description-clearsight">
+                    {descriptionOptional}
+                  </span>
+                </p>
+              )}
+              <p className="text-area-megatron">{textArea}</p>
 
-            {buttonArea && (
-              <div className="button-megatron">
-                {buttonArea.buttonWhite && (
-                  <button
-                    className="button-megatron-white"
-                    onClick={() => openMe()}
-                  >
-                    {buttonArea.buttonWhite}
-                  </button>
-                )}
-
-                {buttonArea.buttonTransparent && (
-                  <a href="#find-work">
-                    <button className="button-megatron-transparent">
-                      {buttonArea.buttonTransparent}
+              {buttonArea && (
+                <div className="button-megatron">
+                  {buttonArea.buttonWhite && (
+                    <button
+                      className="button-megatron-white"
+                      onClick={() => openMe()}
+                    >
+                      {buttonArea.buttonWhite}
                     </button>
-                  </a>
-                )}
-                {buttonArea.buttonOrange && (
-                  <a href="#debit-card">
-                    <button className="button-megatron-orange">
-                      {buttonArea.buttonOrange}
-                    </button>
-                  </a>
-                )}
-              </div>
-            )}
+                  )}
 
-            {iconArea && (
-              <div className="megtron-icon">
-                <img
-                  className="icon-megatron-right"
-                  alt="megatron"
-                  src={iconArea.iconFirst}
-                />
-                <img
-                  className="icon-megatron-left"
-                  alt="megatron"
-                  src={iconArea.iconSecond}
-                />
-              </div>
-            )}
-          </div>
+                  {buttonArea.buttonTransparent && (
+                    <a href="#find-work">
+                      <button className="button-megatron-transparent">
+                        {buttonArea.buttonTransparent}
+                      </button>
+                    </a>
+                  )}
+                  {buttonArea.buttonOrange && (
+                    <a href="#debit-card">
+                      <button className="button-megatron-orange">
+                        {buttonArea.buttonOrange}
+                      </button>
+                    </a>
+                  )}
+                </div>
+              )}
 
-          <div className={containerImage.join(" ")}>
-            {img && (
-              <img src={img} className="megatron-image" alt="megatrgon-image" />
-            )}
-          </div>
+              {iconArea && (
+                <div className="megtron-icon">
+                  <img
+                    className="icon-megatron-right"
+                    alt="megatron"
+                    src={iconArea.iconFirst}
+                  />
+                  <img
+                    className="icon-megatron-left"
+                    alt="megatron"
+                    src={iconArea.iconSecond}
+                  />
+                </div>
+              )}
+            </div>
+          </Flip>
+          <Pulse>
+            <div className={containerImage.join(' ')}>
+              {img && (
+                <img
+                  src={img}
+                  className="megatron-image"
+                  alt="megatrgon-image"
+                />
+              )}
+            </div>
+          </Pulse>
         </div>
       </div>
 
       <Wave
-        colorFirstWave={"#cbdefd"}
-        colorSecoundWave={"#3481f3"}
-        direction={"180"}
+        colorFirstWave={'#cbdefd'}
+        colorSecoundWave={'#3481f3'}
+        direction={'180'}
       />
     </>
   );

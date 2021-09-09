@@ -1,4 +1,5 @@
 import ShowMoreText from "react-show-more-text";
+import Fade from 'react-reveal/Fade';
 import image from "assets/images/card-with-bg-green.svg";
 import image2 from "assets/images/card-with-bg-wallet.svg";
 import image3 from "assets/images/card-with-bg-purple.svg";
@@ -12,6 +13,8 @@ export const CardWithBackground = () => {
 
   return (
     <div className="row container-card-background">
+              <Fade left>
+
       <div className="col-sm-12 col-md-6 col-xl-4 card--container">
         <img src={image} alt="first-card" />
         <div className="card--content">
@@ -39,6 +42,8 @@ export const CardWithBackground = () => {
           </h4>
         </div>
       </div>
+      </Fade>
+      <Fade bottom>
       <div className="col-sm-12 col-md-6 col-xl-4 card--container">
         <img src={image2} alt="second-card" />
         <div className="card--content">
@@ -64,6 +69,8 @@ export const CardWithBackground = () => {
           </h4>
         </div>
       </div>
+      </Fade>
+      <Fade right >
       <div className="col-sm-12 col-md-6 col-xl-4 card--container">
         <img src={image3} alt="third-card" />
         <div className="card--content">
@@ -89,6 +96,7 @@ export const CardWithBackground = () => {
           </h4>
         </div>
       </div>
+      </Fade>
     </div>
   );
 };
