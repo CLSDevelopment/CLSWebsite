@@ -30,7 +30,7 @@ jobs:
         if: github.ref == 'refs/heads/staging'
         with:
           name: finance-waf-staging
-          template: templates/waf.yml
+          template: templates/waf-finance.yml
           no-fail-on-empty-changeset: "1"
           parameter-overrides: >-
             Environment=staging
@@ -41,7 +41,7 @@ jobs:
         if: github.ref == 'refs/heads/staging'
         with:
           name: finance-frontend-infra-staging
-          template: templates/frontend-infra.yml
+          template: templates/frontend-infra-finance.yml
           no-fail-on-empty-changeset: "1"
           parameter-overrides: >-
             Environment=staging,
@@ -54,7 +54,7 @@ jobs:
         uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
         with:
           name: finance-backend-infra-staging
-          template: templates/backend-infra.yml
+          template: templates/backend-infra-finance.yml
           no-fail-on-empty-changeset: "1"
           parameter-overrides: >-
             Environment=staging
