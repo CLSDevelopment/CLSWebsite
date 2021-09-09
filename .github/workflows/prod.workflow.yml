@@ -41,8 +41,8 @@ jobs:
           template: templates/frontend-infra-finance.yml
           no-fail-on-empty-changeset: "1"
           parameter-overrides: >-
-            Environment=prod
-            CertificateARN="arn:aws:acm:us-east-1:996819435370:certificate/d1272a80-f77a-445a-9a20-58db0be4f64c"
+            Environment=prod,
+            CertificateARN="arn:aws:acm:us-east-1:996819435370:certificate/d1272a80-f77a-445a-9a20-58db0be4f64c",
             BucketName="clearsight.finance"
       
       - name: Deploy Backend Infra
