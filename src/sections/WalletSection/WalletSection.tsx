@@ -16,7 +16,7 @@ export const WalletSection = () => {
     <>
       <Wave colorFirstWave={"#f5f9ff"} direction={"0"} />
       <div className="wallet-section">
-        <Jumbotron img={image} sideComponent={true}>
+        <Jumbotron img={image} sideComponent={true} left={'right'} right={'left'}>
           <h3 className={jumbotromTitleArabic.join(" ")}>
             {t("wallet-title")}
           </h3>

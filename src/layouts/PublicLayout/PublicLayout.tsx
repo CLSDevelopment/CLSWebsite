@@ -14,8 +14,6 @@ export const PublicLayout = (props) => {
     <>
       <Helmet>
         <link rel="manifest" href="/manifest.json" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
-
         <meta name="theme-color" content="#000000" />
         <script
           async
