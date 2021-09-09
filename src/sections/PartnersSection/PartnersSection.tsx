@@ -37,7 +37,7 @@ export const PartnersSection = () => {
   return (
     <section className="continaer-partner-section">
       <h1 className="slider-desctiprion">{t("marketing-associates-title")}</h1>
-      <SliderComponent data={data} />
+      <SliderComponent data={data}/>
     </section>
   );
 };

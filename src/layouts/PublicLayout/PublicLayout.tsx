@@ -1,17 +1,19 @@
-import { Helmet } from 'react-helmet';
-import 'bootstrap/scss/bootstrap.scss';
-import 'slick-carousel/slick/slick.scss';
-import { BackToTop, NavBar } from 'components';
+import { Helmet } from "react-helmet";
+import "bootstrap/scss/bootstrap.scss";
+import "slick-carousel/slick/slick.scss";
+import { BackToTop, NavBar } from "components";
 
-import './PublicLayout.scss';
+import "./PublicLayout.scss";
 
-export const PublicLayout = props => {
+export const PublicLayout = (props) => {
   const { children } = props;
-  const rightToLeft = 'rtl';
+  const rightToLeft = "rtl";
 
   return (
     <>
       <Helmet>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#000000" />
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"
@@ -27,7 +29,7 @@ export const PublicLayout = props => {
           }}
         />
       </Helmet>
-      {localStorage.getItem('language') === 'AE' ? (
+      {localStorage.getItem("language") === "AE" ? (
         <div id="public-contianer" dir={rightToLeft}>
           <NavBar />
           {children}

@@ -22,11 +22,11 @@ export const DebitCardCryptocurrencies = () => {
         </h1>
 
         <ListItem data={listItem} />
-        <a href="#" className="section-btn">
+        {/* <a href="#" className="section-btn">
           <button className="section-button">
             {t("debit-card-crypto-btn")}
           </button>
-        </a>
+        </a> */}
       </Jumbotron>
     </div>
   );

@@ -65,7 +65,7 @@
         text-align: left;
 
         @include breakpoint(md) {
-          display: none;
+          display: block;
         }
       }
 
