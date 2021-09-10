@@ -15,7 +15,6 @@ export const Tabs: React.FC<TabsType> = ({ data }) => {
           {data.map((item, index) => (
             <Tab key={index}>
               <img src={item.icon} alt={"image" + index} />
-
               <p className="title-tab">{item.heading}</p>
             </Tab>
           ))}
