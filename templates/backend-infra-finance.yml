@@ -1,0 +1,101 @@
+AWSTemplateFormatVersion: 2010-09-09
+Parameters:
+  Environment:
+    Description: "Name of the current environment"
+    Type: "String"
+    AllowedValues:
+      - prod
+      - staging
+      - dev
+
+Resources:
+  
+  WebServerGroup:
+    Type: AWS::AutoScaling::AutoScalingGroup
+    DependsOn: ElasticLoadBalancer
+    Properties:
+      LaunchConfigurationName: !Ref 'LaunchConfig'
+      MinSize: '1'
+      MaxSize: '2'
+      DesiredCapacity: '1'
+      VPCZoneIdentifier: 
+        - subnet-08c53bcc8ce1e37a1
+        - subnet-0629a11f1b1b73dff
+      TargetGroupARNs:
+        - !Ref DefaultTargetGroup
+
+  LaunchConfig:
+    Type: AWS::AutoScaling::LaunchConfiguration
+    Properties:
+      KeyName: "instance-key"
+      ImageId: ami-0453cb7b5f2b7fca2
+      InstanceType: t2.medium
+      SecurityGroups: [!Ref 'InstanceSecurityGroup']
+      IamInstanceProfile: !Ref 'WebServerInstanceProfile'
+      # UserData:
+
+  ElasticLoadBalancer:
+    Type: AWS::ElasticLoadBalancingV2::LoadBalancer
+    Properties:
+      Name: !Sub finance-${Environment}-lb
+      Subnets: 
+        - subnet-08c53bcc8ce1e37a1
+        - subnet-0629a11f1b1b73dff
+      SecurityGroups:
+        - sg-036d606a5dfb7f4b8
+
+  LoadBalancerListener:
+    Type: AWS::ElasticLoadBalancingV2::Listener
+    Properties:
+      LoadBalancerArn: !Ref ElasticLoadBalancer
+      Port: 80
+      Protocol: HTTP
+      DefaultActions:
+        - Type: forward
+          TargetGroupArn: !Ref DefaultTargetGroup
+
+  DefaultTargetGroup:
+    Type: AWS::ElasticLoadBalancingV2::TargetGroup
+    Properties:
+      Name: !Sub finance-${Environment}-default
+      VpcId: vpc-0301b5da209560e04
+      Port: 80
+      Protocol: HTTP
+
+  InstanceSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable SSH access and HTTP access on the configured port
+      VpcId: vpc-0301b5da209560e04
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '22'
+        ToPort: '22'
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: "-1"
+        CidrIp: 0.0.0.0/0
+
+  WebServerInstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: /
+      Roles: [!Ref 'DescribeHealthRole']
+
+  DescribeHealthRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service: [ec2.amazonaws.com]
+          Action: ['sts:AssumeRole']
+      Path: /
+      Policies:
+      - PolicyName: !Sub finance-describe-instance-health-policy-${Environment}
+        PolicyDocument:
+          Statement:
+          - Effect: Allow
+            Action: ['elasticloadbalancing:DescribeInstanceHealth']
+            Resource: '*'
+
