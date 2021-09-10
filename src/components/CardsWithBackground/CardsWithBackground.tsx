@@ -23,7 +23,7 @@ export const CardWithBackground = () => {
             <ShowMoreText
               /* Default options */
               lines={2}
-              more="Read` more"
+              more="Read more"
               less="Show less"
               className="content-css"
               anchorClass="my-anchor-css-class"
