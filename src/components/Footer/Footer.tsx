@@ -24,7 +24,7 @@ export const Footer = () => {
             </p>
             <div className="container-social-media">
               <a href="https://www.facebook.com/clearsight.finance" target="_blank" rel="noreferrer" className="fa fa-facebook round" />
-              <a className="fa fa-twitter round" />
+              <a href="https://twitter.com/ClearSightFi" className="fa fa-twitter round" />
               <a href="https://t.me/clearsightfinance" target="_blank" className="fa fa-telegram round" />
             </div>
           </div>
