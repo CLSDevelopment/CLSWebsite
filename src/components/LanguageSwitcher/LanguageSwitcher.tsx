@@ -6,7 +6,7 @@ import { getLocalLanguage, saveLocalLanguage } from "services/account";
 import "./LanguageSwitcher.scss";
 
 export const LanguageSwitcher = () => {
-  const [selected, setSelected] = useState("GB");
+  const [selected, setSelected] = useState("gb");
 
   const { i18n } = useTranslation();
 
