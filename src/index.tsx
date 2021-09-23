@@ -33,7 +33,10 @@ ReactDOM.render(
         <RouteSwitcher path="/" />
       </Switch>
     </Router>,
-  const injectGA = () => {
+  
+  document.getElementById('root')
+);
+const injectGA = () => {
   if (typeof window == 'undefined') {
     return;
   }
@@ -45,7 +48,4 @@ ReactDOM.render(
 
   gtag('config', 'G-SC3JZRM40X');
 };
-  document.getElementById('root')
-);
-
 export const history = hist;
