@@ -2,12 +2,14 @@ import ReactDOM from 'react-dom';
 import { createBrowserHistory } from 'history';
 import { Router, Switch } from 'react-router-dom';
 import { configureStore } from './store';
-
+import ReactGA from 'react-ga';
 import { RouteSwitcher } from 'components/RouterSwitcher/RouteSwitcher';
 
 import './i18n';
 import './index.scss';
 ;
+const trackingId = "G-SC3JZRM40X"; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
 
 const hist = createBrowserHistory();
 const store = configureStore();
@@ -18,12 +20,7 @@ hist.listen(location => {
 });
 
 ReactDOM.render(
-  {/* Global site tag (gtag.js) - Google Analytics */}
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"
-    />
-    <script>{injectGA()}</script>
+
     <Router history={hist}>
       <link
         rel="stylesheet"
@@ -36,16 +33,5 @@ ReactDOM.render(
   
   document.getElementById('root')
 );
-const injectGA = () => {
-  if (typeof window == 'undefined') {
-    return;
-  }
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    window.dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
 
-  gtag('config', 'G-SC3JZRM40X');
-};
 export const history = hist;
