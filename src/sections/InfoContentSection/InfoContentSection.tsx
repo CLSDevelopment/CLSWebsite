@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import imgCrypto from "assets/images/crypto-expo.jpg"
 
 import "./InfoContentSection.scss";
 
@@ -9,6 +10,7 @@ export const InfoContentSection = () => {
     <section className="contianer-info-content">
       <h1 className="section-description">{t("info-content-description")}</h1>
       <p className="section-text">{t("info-content-text-about-us")}</p>
+      
       <div className="row solutions">
         <div className="col-md-6 left-side">
           <h3 className="solutions-title">{t("solution-freelancer")}</h3>
@@ -30,6 +32,10 @@ export const InfoContentSection = () => {
             <li>{t("solution-text-employer-five")}</li>
             <li>{t("solution-text-employer-six")}</li>
           </ul>
+        </div>
+        <div style={{textAlign: "center"}}>
+          <h1 className="section-description">Crypto Expo Dubai</h1>
+          <img className="img-crypto" src={imgCrypto} width="1000px"></img>
         </div>
       </div>
     </section>

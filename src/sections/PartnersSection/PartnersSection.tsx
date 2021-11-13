@@ -20,15 +20,6 @@ export const PartnersSection = () => {
       img: yahoo,
       href: "https://finance.yahoo.com/news/clearsight-announces-release-job-platform-145900517.html",
     },
-    { img: as, href: "https://www.asahi.com/and/pressrelease/407757936/" },
-    {
-      img: marketWatch,
-      href: "https://www.marketwatch.com/press-release/clearsight-announces-release-of-new-job-platform-based-on-cryptocurrency-2021-08-12",
-    },
-    {
-      img: einPress,
-      href: "https://www.einnews.com/pr_news/548701382/clearsight-announces-release-of-new-job-platform-based-on-cryptocurrency",
-    },
     {
       img: insider,
       href: "https://markets.businessinsider.com/news/stocks/clearsight-announces-release-of-new-job-platform-based-on-cryptocurrency-1030725045",
