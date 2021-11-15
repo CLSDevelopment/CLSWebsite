@@ -33,10 +33,7 @@ export const InfoContentSection = () => {
             <li>{t("solution-text-employer-six")}</li>
           </ul>
         </div>
-        <div style={{textAlign: "center"}}>
-          <h1 className="section-description">Crypto Expo Dubai</h1>
-          <img className="img-crypto" src={imgCrypto} width="1000px"></img>
-        </div>
+    
       </div>
     </section>
   );
