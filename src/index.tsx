@@ -8,12 +8,9 @@ import { RouteSwitcher } from 'components/RouterSwitcher/RouteSwitcher';
 
 import './i18n';
 import './index.scss';
-
-
-const trackingId = ""; // Replace with your Google Analytics tracking ID
-
-  
-
+;
+const trackingId = "G-SC3JZRM40X"; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
 
 const hist = createBrowserHistory();
 const store = configureStore();
@@ -24,7 +21,7 @@ const store = configureStore();
 // });
 
 ReactDOM.render(
-  
+
     <Router history={hist}>
       <link
         rel="stylesheet"
