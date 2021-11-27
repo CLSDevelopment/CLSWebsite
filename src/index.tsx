@@ -6,41 +6,39 @@ import { configureStore } from "./store";
 import ReactGA from "react-ga";
 import { useLocation } from "react-router-dom";
 import { RouteSwitcher } from "components/RouterSwitcher/RouteSwitcher";
+import { createHistory,LocationProvider }from "@reach/router";
+
 
 import "./i18n";
 import "./index.scss";
 
 
 
-const hist = createBrowserHistory();
+
 const store = configureStore();
 
+ReactGA.initialize("G-SC3JZRM40X");
+const history= createHistory(window);
+
+history.listen( window => {
+  ReactGA.pageview(window.location.pathname+ window.location.search);
+  console.log('page=>',window.location.pathname);
+});
+
 ReactDOM.render(
-  <Router history={hist}>
+  
+  <LocationProvider history={history}>
+  <Router >
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-     <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"
-          ></script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-SC3JZRM40X');
-              `,
-            }}
-          />
     <Switch>
       <RouteSwitcher path="/" />
     </Switch>
   </Router>
+  </LocationProvider>
 ,
-
   document.getElementById("root"),
 );
 
