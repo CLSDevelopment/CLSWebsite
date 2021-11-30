@@ -23,8 +23,8 @@ const GAImplementation = `
 window.dataLayer = window.dataLayer || [];
 
 dataLayer.push({
- 'event': 'Pageview',
- 'visitorType': 'customer'
+ 'event': 'page_view',
+
 });
 `;
 
