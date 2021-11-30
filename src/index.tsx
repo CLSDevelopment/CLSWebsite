@@ -19,10 +19,7 @@ const GAImplementation = `
 
   gtag('config', 'G-SC3JZRM40X');
 </script>
-<script>
-window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({'event': 'page_view'});
-  </script>
+
 
 });
 `;
