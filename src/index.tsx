@@ -30,17 +30,10 @@ ReactDOM.render(
         async
         src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"
       ></script>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-SC3JZRM40X');
-              `,
-        }}
-      />
+    
     </Helmet>
+    <div dangerouslySetInnerHTML={{  __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-SC3JZRM40X');`,  }} </div>
+
     <div dangerouslySetInnerHTML={{ __html: iubendaImplementation }}></div>
     <Switch>
       <RouteSwitcher path="/" />
