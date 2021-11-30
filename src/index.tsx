@@ -21,9 +21,8 @@ const GAImplementation = `
 </script>
 <script>
 window.dataLayer = window.dataLayer || [];
-
-dataLayer.push({
- 'event': 'page_view',
+  window.dataLayer.push({'event': 'page_view'});
+  </script>
 
 });
 `;
