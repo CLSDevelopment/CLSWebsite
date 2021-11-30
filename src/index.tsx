@@ -10,7 +10,6 @@ import "./index.scss";
 const history = createBrowserHistory();
 
 const GAImplementation = `
-<!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -19,9 +18,6 @@ const GAImplementation = `
 
   gtag('config', 'G-SC3JZRM40X');
 </script>
-
-
-});
 `;
 
 const iubendaImplementation = `
