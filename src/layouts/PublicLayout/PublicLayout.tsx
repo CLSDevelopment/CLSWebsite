@@ -12,24 +12,7 @@ export const PublicLayout = (props) => {
 
   return (
     <>
-      <Helmet>
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#000000" />
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-SC3JZRM40X');
-              `,
-          }}
-        />
-      </Helmet>
+
       {localStorage.getItem("language") === "AE" ? (
         <div id="public-contianer" dir={rightToLeft}>
           <NavBar />
