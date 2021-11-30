@@ -9,7 +9,17 @@ import "./index.scss";
 
 const history = createBrowserHistory();
 
+const GAImplementation = `
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-SC3JZRM40X');
+</script>
+`;
 
 const iubendaImplementation = `
 <script type="text/javascript">
@@ -34,6 +44,7 @@ ReactDOM.render(
     </Helmet>
 
     <div dangerouslySetInnerHTML={{ __html: iubendaImplementation }}></div>
+    <div dangerouslySetInnerHTML={{ __html: GAImplementation }}></div>
     <Switch>
       <RouteSwitcher path="/" />
     </Switch>
