@@ -11,7 +11,7 @@ const history = createBrowserHistory();
 
 const GAImplementation = `
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -39,7 +39,7 @@ ReactDOM.render(
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"></script>
     
     </Helmet>
 
