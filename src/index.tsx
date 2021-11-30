@@ -10,7 +10,7 @@ import "./index.scss";
 const history = createBrowserHistory();
 
 const GAImplementation = `
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"></script>
+<script src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -38,10 +38,10 @@ ReactDOM.render(
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-     <div dangerouslySetInnerHTML={{ __html: GAImplementation }}></div>
+  
     
     </Helmet>
-
+   <div dangerouslySetInnerHTML={{ __html: GAImplementation }}></div>
     <div dangerouslySetInnerHTML={{ __html: iubendaImplementation }}></div>
     <Switch>
       <RouteSwitcher path="/" />
