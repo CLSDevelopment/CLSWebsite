@@ -17,6 +17,14 @@ _iub.csConfiguration = {"ccpaAcknowledgeOnDisplay":true,"whitelabel":false,"lang
 <script type="text/javascript" src="//cdn.iubenda.com/cs/tcf/stub-v2.js"></script>
 <script type="text/javascript" src="//cdn.iubenda.com/cs/ccpa/stub.js"></script>
 <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SC3JZRM40X');
+</script>
 `;
 
 ReactDOM.render(
@@ -26,13 +34,9 @@ ReactDOM.render(
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-      <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"
-      ></script>
+     
     
     </Helmet>
-    <div dangerouslySetInnerHTML={{  __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-SC3JZRM40X');`,  }} </div>
 
     <div dangerouslySetInnerHTML={{ __html: iubendaImplementation }}></div>
     <Switch>
