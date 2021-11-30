@@ -19,6 +19,13 @@ const GAImplementation = `
 
   gtag('config', 'G-SC3JZRM40X');
 </script>
+<script>
+window.dataLayer = window.dataLayer || [];
+
+dataLayer.push({
+ 'event': 'Pageview',
+ 'visitorType': 'customer'
+});
 `;
 
 const iubendaImplementation = `
