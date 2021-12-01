@@ -9,18 +9,7 @@ import "./index.scss";
 
 const history = createBrowserHistory();
 
-const GAImplementation = `
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-203923409-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-203923409-1');
-</script>
-
-`;
 
 const iubendaImplementation = `
 <script type="text/javascript">
@@ -40,7 +29,15 @@ ReactDOM.render(
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       />
- <div dangerouslySetInnerHTML={{ __html: GAImplementation }}></div>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-203923409-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-203923409-1');
+</script>
+
     
     </Helmet>
 
