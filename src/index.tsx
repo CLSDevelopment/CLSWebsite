@@ -29,15 +29,16 @@ ReactDOM.render(
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-203923409-1" />
-<script
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-203923409-1');
-/>
-
+ <script async src=`https://www.googletagmanager.com/gtag/js?id=UA-203923409-1`></script>
+      <script>
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', UA-203923409-1);
+        `}
+      </script>
     
     </Helmet>
 
