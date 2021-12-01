@@ -16,7 +16,7 @@ const GAImplementation = `
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-SC3JZRM40X');
+  gtag('config', 'G-N76KX1TJ8N');
 </script>
 `;
 
