@@ -40,12 +40,12 @@ ReactDOM.render(
         rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-
+ <div dangerouslySetInnerHTML={{ __html: GAImplementation }}></div>
     
     </Helmet>
 
     <div dangerouslySetInnerHTML={{ __html: iubendaImplementation }}></div>
-    <div dangerouslySetInnerHTML={{ __html: GAImplementation }}></div>
+   
     <Switch>
       <RouteSwitcher path="/" />
     </Switch>
