@@ -10,7 +10,7 @@ import "./index.scss";
 const history = createBrowserHistory();
 
 const GAImplementation = `
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SC3JZRM40X"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N76KX1TJ8N"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
